@@ -128,3 +128,4 @@ select, input[type=text], textarea { font: 15px var(--text); color: var(--bone);
 .cmp th:first-child { width: 34%; }
 .cmp td { overflow-wrap: anywhere; }
 @media (max-width: 560px) { .cmp th, .cmp td { padding: 4px 4px; font-size: 12px; } }
+select { max-width: 100%; width: auto; }

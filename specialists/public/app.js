@@ -198,7 +198,7 @@ function renderTrack() {
       <h3>${esc(c.name)}</h3>
       <p class="small"><a href="https://huggingface.co/${esc(c.repo)}">huggingface.co/${esc(c.repo)}</a>${c.revision ? ` · revision <span class="mono">${esc(c.revision)}</span>` : ''}</p>
       <p class="small muted">Base: ${esc(c.base)}${c.note ? '. ' + esc(c.note) : ''}</p>
-      <p class="small">Measured offline on our GPU on ${esc(fmtDate(S.date))}; not yet available on api.decisionmodels.io.</p></div>
+      </div>
     <div class="metrics">${metricBlock(t)}</div>
     <div class="card block"><div class="eyebrow">Item browser</div><h3>Look at the items</h3>
       <div class="tabs" role="tablist" id="s-tabs">
@@ -206,7 +206,7 @@ function renderTrack() {
         <button role="tab" aria-selected="false" data-k="cw">Champion right, Jev wrong (${cnt.cw})</button>
         <button role="tab" aria-selected="false" data-k="jw">Jev right, champion wrong (${cnt.jw})</button>
       </div>
-      <div class="filters"><label>Set <select id="s-set"><option value="">All sets</option>${t.sets.map((s) => `<option value="${esc(s.key)}">${esc(s.label)}</option>`).join('')}</select></label><span id="s-count" class="muted small" aria-live="polite"></span></div>
+      <div class="filters"><label>Set <select id="s-set"><option value="">All sets</option>${t.sets.map((s) => `<option value="${esc(s.key)}">${esc(s.key === 'fresh' ? 'Fresh items (unseen)' : s.key === 'dev' ? 'Public dev set' : s.label)}</option>`).join('')}</select></label><span id="s-count" class="muted small" aria-live="polite"></span></div>
       <div class="legend small"><span class="pill ch">champion</span><span class="pill s1">s1-pro</span><span class="pill jev">Jev 1.14.0</span><span class="muted">bars show each model's probability for the option</span></div>
       <div id="s-list" class="items"></div><div class="actions"><button id="s-more" class="btn ghost" hidden>Show more</button></div></div>`;
   sTab = 'all'; sSet = '';
