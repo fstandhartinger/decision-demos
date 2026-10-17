@@ -1,0 +1,1446 @@
+{
+ "version": "chat-v1",
+ "created": "2026-10-17",
+ "messages": [
+  {
+   "id": "m001",
+   "user": "wiffle_wes",
+   "text": "ive been stuck on that puzzle for two hours help",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game help request"
+  },
+  {
+   "id": "m002",
+   "user": "t0astedbagel",
+   "text": "Kira can you show your keybinds?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to the streamer"
+  },
+  {
+   "id": "m003",
+   "user": "orbitalpanda",
+   "text": "use the grapple on the tower!!",
+   "lang": "en",
+   "label": "allow",
+   "note": "Backseating, fine"
+  },
+  {
+   "id": "m004",
+   "user": "fr33_skinz_bot",
+   "text": "FREE Emberfall skins!! claim at emb3rfall-gifts.xyz before they run out",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Fake skin giveaway with fake domain"
+  },
+  {
+   "id": "m005",
+   "user": "kira_mod_dale",
+   "text": "Kira's schedule is in the panel below, Mon/Wed/Fri 7pm",
+   "lang": "en",
+   "label": "allow",
+   "note": "Mod sharing info, no link"
+  },
+  {
+   "id": "m006",
+   "user": "pickle_pete",
+   "text": "cool, another chest with 3 gold. very worth it. truly",
+   "lang": "en",
+   "label": "allow",
+   "note": "Sarcasm about game, fine"
+  },
+  {
+   "id": "m007",
+   "user": "moon_shot_ms",
+   "text": "new coin EMBR launching, 50x easy, dont miss it",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Crypto shill without link"
+  },
+  {
+   "id": "m008",
+   "user": "tofu_tank",
+   "text": "Kira what difficulty are you playing on?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to the streamer"
+  },
+  {
+   "id": "m009",
+   "user": "mod_jules",
+   "text": "As requested by Kira, the community discord invite: https://discord.example/kirahq",
+   "lang": "en",
+   "label": "allow",
+   "note": "Streamer-requested link, legit"
+  },
+  {
+   "id": "m010",
+   "user": "echo_elk",
+   "text": "Is there a way to turn off the damage numbers?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game settings question"
+  },
+  {
+   "id": "m011",
+   "user": "kuso_ken",
+   "text": "お前下手くそすぎ、配信やめろ、ブス",
+   "lang": "ja",
+   "label": "hide_abuse",
+   "note": "Japanese insult and body shaming"
+  },
+  {
+   "id": "m012",
+   "user": "jetlag_joe",
+   "text": "audio is a bit low on my end, anyone else?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Technical feedback"
+  },
+  {
+   "id": "m013",
+   "user": "saltysoup",
+   "text": "you absolute donkey you walked right into the trap LUL",
+   "lang": "en",
+   "label": "allow",
+   "note": "Friendly banter, joking tone"
+  },
+  {
+   "id": "m014",
+   "user": "rooftop_ron",
+   "text": "heres the build guide Kira mentioned: https://kira.example/emberfall-build",
+   "lang": "en",
+   "label": "allow",
+   "note": "Streamer-requested link, legit"
+  },
+  {
+   "id": "m015",
+   "user": "ashenwolf",
+   "text": "first time catching a stream live, loving it <3",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive newcomer message"
+  },
+  {
+   "id": "m016",
+   "user": "sub4sub_sally",
+   "text": "sub4sub?? sub to me and I sub back, follow4follow too",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Sub-for-sub spam, no link"
+  },
+  {
+   "id": "m017",
+   "user": "anon_hater",
+   "text": "@kiralover_ nobody likes you, go away",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Harassment of another chatter"
+  },
+  {
+   "id": "m018",
+   "user": "doxx_dave",
+   "text": "@duskrunner lives at 14 Nowhere Lane, Faketown, ZZ 00000 lol, drop by",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Doxxing attempt with address, human review"
+  },
+  {
+   "id": "m019",
+   "user": "n0ctis",
+   "text": "you absolute potato, that jump was insane LUL",
+   "lang": "en",
+   "label": "allow",
+   "note": "Friendly banter, compliment in disguise"
+  },
+  {
+   "id": "m020",
+   "user": "kostenlos_skins",
+   "text": "Gratis Emberfall Skins! Jetzt abholen auf emb3rfall-gifts.xyz",
+   "lang": "de",
+   "label": "hide_spam",
+   "note": "German fake skin giveaway link"
+  },
+  {
+   "id": "m021",
+   "user": "copypasta_carl",
+   "text": "This is a copypasta: Navy Seal this is the greatest stream ever so give me a hug and a sub and give me a hug and a sub and give me a hug and a sub",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Repeated copypasta flood, duplicate message"
+  },
+  {
+   "id": "m022",
+   "user": "sponsored_sam",
+   "text": "hey streamer I run an agency, we can get you sponsors, email me at streamdeals@example.biz",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Unsolicited promo with contact email"
+  },
+  {
+   "id": "m023",
+   "user": "ruim_demais",
+   "text": "você é um lixo, para de streamar, ninguém aguenta você",
+   "lang": "pt",
+   "label": "hide_abuse",
+   "note": "Portuguese insult aimed at streamer"
+  },
+  {
+   "id": "m024",
+   "user": "tacoboy99",
+   "text": "eres un crack Kira, saludos desde México",
+   "lang": "es",
+   "label": "allow",
+   "note": "Spanish praise and greeting"
+  },
+  {
+   "id": "m025",
+   "user": "sunny_side_up",
+   "text": "you can stab the merchant if you want, no one will know. game physics are weird",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game-violence talk, fine"
+  },
+  {
+   "id": "m026",
+   "user": "bratwurst_bob",
+   "text": "du bist so ein Kartoffel, aber ich liebe es LUL",
+   "lang": "de",
+   "label": "allow",
+   "note": "German friendly banter, fine"
+  },
+  {
+   "id": "m027",
+   "user": "catfish_dan",
+   "text": "chat is it worth buying the DLC",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to chat"
+  },
+  {
+   "id": "m028",
+   "user": "sleepy_kettle",
+   "text": "KEKW the horse just clipped through the wall",
+   "lang": "en",
+   "label": "allow",
+   "note": "Joke about game glitch"
+  },
+  {
+   "id": "m029",
+   "user": "twitchy_toes",
+   "text": "LMAO the dragon just yeeted you off the cliff",
+   "lang": "en",
+   "label": "allow",
+   "note": "Joke about gameplay"
+  },
+  {
+   "id": "m030",
+   "user": "silverfin_sf",
+   "text": "what mic are you using? sounds crisp",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to the streamer"
+  },
+  {
+   "id": "m031",
+   "user": "sapphire_sy",
+   "text": "ngl that fall damage was unnecessary KEKW",
+   "lang": "en",
+   "label": "allow",
+   "note": "Joke"
+  },
+  {
+   "id": "m032",
+   "user": "sir_loin_of_beef",
+   "text": "this boss music slaps",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive game comment"
+  },
+  {
+   "id": "m033",
+   "user": "fadingstar_x",
+   "text": "i feel like everyone would be better off without me",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Possible suicidal ideation, human review"
+  },
+  {
+   "id": "m034",
+   "user": "pixelmoth",
+   "text": "PogChamp that dodge roll",
+   "lang": "en",
+   "label": "allow",
+   "note": "Hype reaction to gameplay"
+  },
+  {
+   "id": "m035",
+   "user": "loopy_lars",
+   "text": "imagine not using the ember bow, couldnt be me",
+   "lang": "en",
+   "label": "allow",
+   "note": "Light game opinion"
+  },
+  {
+   "id": "m036",
+   "user": "promo_pixel",
+   "text": "check out my channel twitch-clone.example/mychannel i post daily!!",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Self-promo link in chat"
+  },
+  {
+   "id": "m037",
+   "user": "ogre_otis",
+   "text": "Just hit him with the hammer, smash him to bits",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game-violence talk, fine"
+  },
+  {
+   "id": "m038",
+   "user": "stormy_steve",
+   "text": "What GPU are you running? Frame rate looks smooth",
+   "lang": "en",
+   "label": "allow",
+   "note": "Tech question"
+  },
+  {
+   "id": "m039",
+   "user": "ganhe_dinheiro",
+   "text": "Ganhe 500 reais por dia em casa, chama no privado!!",
+   "lang": "pt",
+   "label": "hide_spam",
+   "note": "Portuguese get-rich-quick spam"
+  },
+  {
+   "id": "m040",
+   "user": "nachteule_nele",
+   "text": "töte den Boss mit dem Feuerschwert, der ist schwach dagegen",
+   "lang": "de",
+   "label": "allow",
+   "note": "German game-violence advice, fine"
+  },
+  {
+   "id": "m041",
+   "user": "rubberduck_rj",
+   "text": "this game has no business looking this good",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive game comment"
+  },
+  {
+   "id": "m042",
+   "user": "regalo_gamer",
+   "text": "Skins gratis para todos!! entra a emb3rfall-gifts.xyz ya",
+   "lang": "es",
+   "label": "hide_spam",
+   "note": "Spanish fake giveaway with fake domain"
+  },
+  {
+   "id": "m043",
+   "user": "snob_sven",
+   "text": "@kaffeekanne halt die Klappe, du Idiot",
+   "lang": "de",
+   "label": "hide_abuse",
+   "note": "German insult aimed at chatter"
+  },
+  {
+   "id": "m044",
+   "user": "darmowe_skiny",
+   "text": "Darmowe skiny do Emberfall tutaj: emb3rfall-gifts.xyz",
+   "lang": "pl",
+   "label": "hide_spam",
+   "note": "Polish fake skin giveaway link"
+  },
+  {
+   "id": "m045",
+   "user": "cadeau_gratuit",
+   "text": "Cadeaux gratuits pour tous les viewers : emb3rfall-gifts.xyz",
+   "lang": "fr",
+   "label": "hide_spam",
+   "note": "French fake giveaway link"
+  },
+  {
+   "id": "m046",
+   "user": "streamgrow_hq",
+   "text": "I help streamers grow 10x, check my profile and DM me for rates",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Self-promo growth service spam"
+  },
+  {
+   "id": "m047",
+   "user": "petit_chat_noir",
+   "text": "trop bien ce passage, bravo !",
+   "lang": "fr",
+   "label": "allow",
+   "note": "French praise"
+  },
+  {
+   "id": "m048",
+   "user": "moonlit_mara",
+   "text": "you make the best snack-break commentary",
+   "lang": "en",
+   "label": "allow",
+   "note": "Compliment"
+  },
+  {
+   "id": "m049",
+   "user": "mechant_max",
+   "text": "t'es nul et moche Kira, arrête ce stream",
+   "lang": "fr",
+   "label": "hide_abuse",
+   "note": "French insult and body shaming"
+  },
+  {
+   "id": "m050",
+   "user": "ironbark_",
+   "text": "thats the best armor set in the game for fire builds fyi",
+   "lang": "en",
+   "label": "allow",
+   "note": "Helpful game tip"
+  },
+  {
+   "id": "m051",
+   "user": "cruel_cal",
+   "text": "every mod here is a brain-dead joke",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at moderators"
+  },
+  {
+   "id": "m052",
+   "user": "dr_noodle",
+   "text": "why does the map have 3 different compasses lol",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game humor question"
+  },
+  {
+   "id": "m053",
+   "user": "cryptoking_2026",
+   "text": "Turn $50 into $5000 with EmberCoin!! join now t.me/embercoin-moon-fake",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Crypto shill with scam link"
+  },
+  {
+   "id": "m054",
+   "user": "el_gato_gordo",
+   "text": "Kira, ¿qué dificultad estás jugando?",
+   "lang": "es",
+   "label": "allow",
+   "note": "Spanish question to streamer"
+  },
+  {
+   "id": "m055",
+   "user": "giveaway_gus",
+   "text": "GIVEAWAY: 1000 V-Bucks-style gems, just visit emberfall-rewards.top and log in",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Fake giveaway asking for login"
+  },
+  {
+   "id": "m056",
+   "user": "hexed_hazel",
+   "text": "lol Kira you died to the tutorial boss again",
+   "lang": "en",
+   "label": "allow",
+   "note": "Teasing the streamer, mild"
+  },
+  {
+   "id": "m057",
+   "user": "rainy_rae",
+   "text": "fire sword on the ice boss is a cheat code",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game strategy"
+  },
+  {
+   "id": "m058",
+   "user": "emberkid07",
+   "text": "ok that crit did like 9000 dmg what",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game talk"
+  },
+  {
+   "id": "m059",
+   "user": "croissant_kid",
+   "text": "tu es un vrai boulet mais c'est trop drôle LUL",
+   "lang": "fr",
+   "label": "allow",
+   "note": "French friendly banter, fine"
+  },
+  {
+   "id": "m060",
+   "user": "lantern_lou",
+   "text": "I'm gonna go make dinner, back in 20, dont beat the boss without me",
+   "lang": "en",
+   "label": "allow",
+   "note": "Casual joke"
+  },
+  {
+   "id": "m061",
+   "user": "loot_leak_ll",
+   "text": "LEAKED Emberfall 2 gameplay at emb3rfall-leaks.top",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Fake leak lure with fake domain"
+  },
+  {
+   "id": "m062",
+   "user": "stalker_stu",
+   "text": "@ashenwolf your home is 8 Sample Street, Mocktown, ZZ 12345, right?",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Address of chatter, doxxing attempt"
+  },
+  {
+   "id": "m063",
+   "user": "crimson_crumb",
+   "text": "hes not even that strong just dodge the fire breath",
+   "lang": "en",
+   "label": "allow",
+   "note": "Backseating, fine"
+  },
+  {
+   "id": "m064",
+   "user": "pogpilot",
+   "text": "W stream",
+   "lang": "en",
+   "label": "allow",
+   "note": "Short positive message"
+  },
+  {
+   "id": "m065",
+   "user": "kluska_kasia",
+   "text": "hahaha ten skok byl niesamowity",
+   "lang": "pl",
+   "label": "allow",
+   "note": "Polish praise for gameplay"
+  },
+  {
+   "id": "m066",
+   "user": "harass_harry",
+   "text": "@mod_jules unban me or I will keep spamming insults at you all day",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Harassment of moderator"
+  },
+  {
+   "id": "m067",
+   "user": "sneaky_sid",
+   "text": "I know where you live Kira, 22 Imaginary Road, Testville, ZZ 99999",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Posting address, implied intimidation"
+  },
+  {
+   "id": "m068",
+   "user": "sol_nascente_br",
+   "text": "mata o dragão com a espada de fogo!",
+   "lang": "pt",
+   "label": "allow",
+   "note": "Portuguese game-violence talk, fine"
+  },
+  {
+   "id": "m069",
+   "user": "marshmellow_ma",
+   "text": "no way she found the secret room",
+   "lang": "en",
+   "label": "allow",
+   "note": "Hype reaction"
+  },
+  {
+   "id": "m070",
+   "user": "deal_hunter_hh",
+   "text": "50% OFF game keys today only keys-4-less.shop use code KIRA",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Key reseller spam link"
+  },
+  {
+   "id": "m071",
+   "user": "BramblePaw",
+   "text": "kill the boss with the fire sword, its weak to ember dmg",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game-violence advice, fine"
+  },
+  {
+   "id": "m072",
+   "user": "mellow_max",
+   "text": "love this stream, been here since 50 followers <3",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive loyalty comment"
+  },
+  {
+   "id": "m073",
+   "user": "basil_the_brave",
+   "text": "Kira which class would you recommend for a first playthrough?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to the streamer"
+  },
+  {
+   "id": "m074",
+   "user": "zubr_zbyszek",
+   "text": "zabij smoka mieczem ognia, jest slaby na ogien",
+   "lang": "pl",
+   "label": "allow",
+   "note": "Polish game-violence advice, fine"
+  },
+  {
+   "id": "m075",
+   "user": "chat_bully_77",
+   "text": "@pixelmoth you're trash and everyone knows it",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at another chatter"
+  },
+  {
+   "id": "m076",
+   "user": "kaffeekanne",
+   "text": "das war ein krasser Sprung, wie hast du das geschafft",
+   "lang": "de",
+   "label": "allow",
+   "note": "German praise for gameplay"
+  },
+  {
+   "id": "m077",
+   "user": "vantablack_v",
+   "text": "omg the hit on that sword swing, so clean",
+   "lang": "en",
+   "label": "allow",
+   "note": "Praise for gameplay"
+  },
+  {
+   "id": "m078",
+   "user": "mr_waffle88",
+   "text": "how many hours into Emberfall are you",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to the streamer"
+  },
+  {
+   "id": "m079",
+   "user": "telefon_tomek",
+   "text": "oto numer jej telefonu: 555 0199, zadzwoncie i powiedzcie jej co o niej myslicie",
+   "lang": "pl",
+   "label": "escalate",
+   "note": "Polish phone number of another person"
+  },
+  {
+   "id": "m080",
+   "user": "old_man_ollie",
+   "text": "Kira's chat is the nicest on twitch, change my mind",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive comment"
+  },
+  {
+   "id": "m081",
+   "user": "spite_sam",
+   "text": "everyone in this chat is a loser with no life",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at all chatters"
+  },
+  {
+   "id": "m082",
+   "user": "rude_randy",
+   "text": "you are so ugly Kira, turn off the camera",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Body shaming streamer"
+  },
+  {
+   "id": "m083",
+   "user": "kiralover_",
+   "text": "Kira your voice is so calming tonight",
+   "lang": "en",
+   "label": "allow",
+   "note": "Compliment to streamer"
+  },
+  {
+   "id": "m084",
+   "user": "hype_train_bot",
+   "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Character flood with no content"
+  },
+  {
+   "id": "m085",
+   "user": "click_me_please",
+   "text": "hey cute stream :) go to my profile for something special ;)",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Spam luring to profile, no link"
+  },
+  {
+   "id": "m086",
+   "user": "hanabi_hana",
+   "text": "炎の剣でボスを倒そう！",
+   "lang": "ja",
+   "label": "allow",
+   "note": "Japanese game-violence talk, fine"
+  },
+  {
+   "id": "m087",
+   "user": "lemon_zest_lz",
+   "text": "she said 'one more run' 4 hours ago KEKW",
+   "lang": "en",
+   "label": "allow",
+   "note": "Joke about streamer"
+  },
+  {
+   "id": "m088",
+   "user": "frostbyte_fi",
+   "text": "emberfall lore is deeper than i expected ngl",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game talk"
+  },
+  {
+   "id": "m089",
+   "user": "pao_de_queijo",
+   "text": "Kira, qual é a melhor classe pra começar?",
+   "lang": "pt",
+   "label": "allow",
+   "note": "Portuguese question to streamer"
+  },
+  {
+   "id": "m090",
+   "user": "RiftWalkerZ",
+   "text": "@Kira link to your schedule?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to the streamer"
+  },
+  {
+   "id": "m091",
+   "user": "viewer_boost_pro",
+   "text": "Want more followers? buy followers views chat at bigstreamz-boost.biz cheap!!",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Follower-selling bot advertisement"
+  },
+  {
+   "id": "m092",
+   "user": "nebula_nell",
+   "text": "Kira your chat is hilarious today <3 <3",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive comment"
+  },
+  {
+   "id": "m093",
+   "user": "pierogi_piotr",
+   "text": "Kira, ktory boss jest najtrudniejszy?",
+   "lang": "pl",
+   "label": "allow",
+   "note": "Polish question to streamer"
+  },
+  {
+   "id": "m094",
+   "user": "glimmer_gus",
+   "text": "You can't spell 'Emberfall' without 'fall' and I fell 6 times today",
+   "lang": "en",
+   "label": "allow",
+   "note": "Self-deprecating joke"
+  },
+  {
+   "id": "m095",
+   "user": "gl1tchfox",
+   "text": "go left!! the chest is LEFT",
+   "lang": "en",
+   "label": "allow",
+   "note": "Mild backseating, harmless"
+  },
+  {
+   "id": "m096",
+   "user": "nfts4u",
+   "text": "exclusive Emberfall NFT drop, 100x guaranteed, mint at emb3r-nft.cc",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Crypto/NFT shill with fake domain"
+  },
+  {
+   "id": "m097",
+   "user": "pastel_punk",
+   "text": "burn it all down, the villagers deserved it LUL",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game-violence joke, fine"
+  },
+  {
+   "id": "m098",
+   "user": "ghostpepperz",
+   "text": "clip it clip it CLIP IT",
+   "lang": "en",
+   "label": "allow",
+   "note": "Hype, asks for clip"
+  },
+  {
+   "id": "m099",
+   "user": "whale_watch_ww",
+   "text": "BUY BTC NOW!!! guaranteed 300% in 24h, ask me how",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Crypto shill, no link"
+  },
+  {
+   "id": "m100",
+   "user": "churro_chaser",
+   "text": "mata al jefe con la espada de fuego, es débil",
+   "lang": "es",
+   "label": "allow",
+   "note": "Spanish game-violence advice, fine"
+  },
+  {
+   "id": "m101",
+   "user": "NightOwlNik",
+   "text": "just got off work, did I miss the boss fight?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Casual chat question"
+  },
+  {
+   "id": "m102",
+   "user": "drift_wood",
+   "text": "that was SO close PogChamp",
+   "lang": "en",
+   "label": "allow",
+   "note": "Hype reaction"
+  },
+  {
+   "id": "m103",
+   "user": "tangerine_tom",
+   "text": "dont forget to hydrate and stretch Kira",
+   "lang": "en",
+   "label": "allow",
+   "note": "Caring comment"
+  },
+  {
+   "id": "m104",
+   "user": "followers_r_us",
+   "text": "get 1k followers in 5 min -> follow-factory.example/kira",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Follower-selling bot with link"
+  },
+  {
+   "id": "m105",
+   "user": "depressed_dee",
+   "text": "sorry to dump this here, but I've been hurting myself and I dont know who to tell",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Self-harm disclosure, human should respond"
+  },
+  {
+   "id": "m106",
+   "user": "crispy_cricket",
+   "text": "Kira dodge LEFT not right oh no",
+   "lang": "en",
+   "label": "allow",
+   "note": "Backseating, fine"
+  },
+  {
+   "id": "m107",
+   "user": "hasser_hans",
+   "text": "Du bist so ein Versager Kira, hör auf zu streamen",
+   "lang": "de",
+   "label": "hide_abuse",
+   "note": "German insult aimed at streamer"
+  },
+  {
+   "id": "m108",
+   "user": "pest_pete",
+   "text": "@duskrunner you cant even read, how dumb are you",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at chatter"
+  },
+  {
+   "id": "m109",
+   "user": "leak_lenny",
+   "text": "here's his number 555-0142, call him and tell him what you think",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Posting another person's phone number"
+  },
+  {
+   "id": "m110",
+   "user": "inkwellian",
+   "text": "can you do a no-damage run next",
+   "lang": "en",
+   "label": "allow",
+   "note": "Content request"
+  },
+  {
+   "id": "m111",
+   "user": "mugwump_mia",
+   "text": "did the loot just drop twice or is my stream lagging",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question about stream"
+  },
+  {
+   "id": "m112",
+   "user": "pinecone_pat",
+   "text": "thats it Kira, you got this, last phase!!",
+   "lang": "en",
+   "label": "allow",
+   "note": "Encouragement"
+  },
+  {
+   "id": "m113",
+   "user": "copypasta_carl",
+   "text": "This is a copypasta: Navy Seal this is the greatest stream ever so give me a hug and a sub and give me a hug and a sub and give me a hug and a sub",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Repeated copypasta flood"
+  },
+  {
+   "id": "m114",
+   "user": "oat_milk_otto",
+   "text": "can we get a 'chat plays' segment sometime",
+   "lang": "en",
+   "label": "allow",
+   "note": "Content request"
+  },
+  {
+   "id": "m115",
+   "user": "quietcrow",
+   "text": "bro just parry him",
+   "lang": "en",
+   "label": "allow",
+   "note": "Backseating, fine"
+  },
+  {
+   "id": "m116",
+   "user": "bot_5521",
+   "text": "Best viewers on twitch: bigstreamz-boost.biz (promo code FREE)",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Viewer-selling bot ad"
+  },
+  {
+   "id": "m117",
+   "user": "bruxa_do_9",
+   "text": "kkkkk caiu do penhasco de novo",
+   "lang": "pt",
+   "label": "allow",
+   "note": "Portuguese joke about gameplay"
+  },
+  {
+   "id": "m118",
+   "user": "Schnitzel_Sven",
+   "text": "Kira, wie lange spielst du heute noch?",
+   "lang": "de",
+   "label": "allow",
+   "note": "German question to streamer"
+  },
+  {
+   "id": "m119",
+   "user": "odio_ovidio",
+   "text": "eres horrible Kira, cállate ya, nadie te quiere aquí",
+   "lang": "es",
+   "label": "hide_abuse",
+   "note": "Spanish insult aimed at streamer"
+  },
+  {
+   "id": "m120",
+   "user": "lame_larry",
+   "text": "@ashenwolf you're such a noob, stop typing, idiot",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at chatter"
+  },
+  {
+   "id": "m121",
+   "user": "cringe_connor",
+   "text": "Kira go back to school, you're too stupid for this game",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at streamer"
+  },
+  {
+   "id": "m122",
+   "user": "vengo_victor",
+   "text": "Sé dónde vives Kira, calle Falsa 123, voy a ir a verte",
+   "lang": "es",
+   "label": "escalate",
+   "note": "Spanish threat with fake address, escalate"
+  },
+  {
+   "id": "m123",
+   "user": "tired_tilly",
+   "text": "I cant keep going like this, I dont know if I want to be alive",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Possible suicidal ideation, human review"
+  },
+  {
+   "id": "m124",
+   "user": "nopesauce",
+   "text": "bro this stream is a vibe",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive comment"
+  },
+  {
+   "id": "m125",
+   "user": "emberfall_admin_x",
+   "text": "Congrats you won an Emberfall Legendary Key! verify at emb3rfall-prize.click",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Fake admin prize scam"
+  },
+  {
+   "id": "m126",
+   "user": "xX_destroyer_Xx",
+   "text": "shut up Kira nobody asked for your voice",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Harassment of streamer"
+  },
+  {
+   "id": "m127",
+   "user": "galaxybrain_gb",
+   "text": "wait is that a hidden path behind the waterfall??",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game observation"
+  },
+  {
+   "id": "m128",
+   "user": "fizzy_fig",
+   "text": "oh the sarcasm in 'great plan chat' was strong LUL",
+   "lang": "en",
+   "label": "allow",
+   "note": "Joking about streamer sarcasm"
+  },
+  {
+   "id": "m129",
+   "user": "ramen_ryo",
+   "text": "今のジャンプやばい！すごい！",
+   "lang": "ja",
+   "label": "allow",
+   "note": "Japanese hype reaction"
+  },
+  {
+   "id": "m130",
+   "user": "ember_lootbox",
+   "text": "UNLOCK all armor sets free: emberfall-unlock.xyz no survey!",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Fake free unlock scam link"
+  },
+  {
+   "id": "m131",
+   "user": "greenhorn_gus",
+   "text": "new here, whats the lore behind the ember crown?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Newcomer question"
+  },
+  {
+   "id": "m132",
+   "user": "snark_sid",
+   "text": "you look disgusting in that hoodie, fat and sloppy",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Body shaming streamer"
+  },
+  {
+   "id": "m133",
+   "user": "HexHound",
+   "text": "DONT OPEN THAT DOOR",
+   "lang": "en",
+   "label": "allow",
+   "note": "Caps excitement, harmless"
+  },
+  {
+   "id": "m134",
+   "user": "nobody_nate",
+   "text": "you banned me so I'll find where you live and show up, see you soon",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Threat to appear in person"
+  },
+  {
+   "id": "m135",
+   "user": "luna_roja_22",
+   "text": "jajaja el caballo se quedó atascado en la pared KEKW",
+   "lang": "es",
+   "label": "allow",
+   "note": "Spanish joke about glitch"
+  },
+  {
+   "id": "m136",
+   "user": "cobalt_cat",
+   "text": "love the new overlay btw",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive stream feedback"
+  },
+  {
+   "id": "m137",
+   "user": "wobbly_knee",
+   "text": "i keep rewatching that last cutscene its so good",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive game comment"
+  },
+  {
+   "id": "m138",
+   "user": "static_sheep",
+   "text": "OMEGALUL you tripped over a chicken",
+   "lang": "en",
+   "label": "allow",
+   "note": "Joke about gameplay"
+  },
+  {
+   "id": "m139",
+   "user": "willow_wisp_ww",
+   "text": "sending good vibes from the UK",
+   "lang": "en",
+   "label": "allow",
+   "note": "Positive greeting"
+  },
+  {
+   "id": "m140",
+   "user": "kettlecorn",
+   "text": "Kira you are cracked at this game PogChamp",
+   "lang": "en",
+   "label": "allow",
+   "note": "Praise for streamer"
+  },
+  {
+   "id": "m141",
+   "user": "tiny_bot_77",
+   "text": "kira kira kira kira kira kira kira kira kira kira kira kira",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Repeated word flood"
+  },
+  {
+   "id": "m142",
+   "user": "nimbus_nate",
+   "text": "Kira did you see the new patch notes??",
+   "lang": "en",
+   "label": "allow",
+   "note": "Question to the streamer"
+  },
+  {
+   "id": "m143",
+   "user": "zlosnik_zdzich",
+   "text": "jestes beznadziejna, nikt cie tu nie lubi",
+   "lang": "pl",
+   "label": "hide_abuse",
+   "note": "Polish insult aimed at streamer"
+  },
+  {
+   "id": "m144",
+   "user": "beanie_bo",
+   "text": "I'll kill you in the next co-op session if you steal my loot again lol",
+   "lang": "en",
+   "label": "allow",
+   "note": "Playful in-game threat, fine"
+  },
+  {
+   "id": "m145",
+   "user": "coalcrumb",
+   "text": "drink some water Kira <3",
+   "lang": "en",
+   "label": "allow",
+   "note": "Caring comment"
+  },
+  {
+   "id": "m146",
+   "user": "hateful_hank",
+   "text": "you play like a clown, nobody wants to watch this garbage",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at streamer"
+  },
+  {
+   "id": "m147",
+   "user": "zesty_lemon",
+   "text": "I would die for the soundtrack in this game",
+   "lang": "en",
+   "label": "allow",
+   "note": "Hyperbole about music, harmless"
+  },
+  {
+   "id": "m148",
+   "user": "tin_can_tim",
+   "text": "sniped him from across the map, 10/10",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game-violence talk, fine"
+  },
+  {
+   "id": "m149",
+   "user": "phone_phil",
+   "text": "call this girl, 555-0178, she is a fake and a liar",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Posting a person's phone number"
+  },
+  {
+   "id": "m150",
+   "user": "einsam_emil",
+   "text": "Ich will mir wehtun, ich halte das nicht mehr aus",
+   "lang": "de",
+   "label": "escalate",
+   "note": "German self-harm statement, human review"
+  },
+  {
+   "id": "m151",
+   "user": "ban_evader_99",
+   "text": "I got banned and I'll be back with 10 new accounts, you idiots",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Harassment and ban evasion boast"
+  },
+  {
+   "id": "m152",
+   "user": "bitter_bob",
+   "text": "what a pathetic loser, uninstall the game and your life",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insults aimed at streamer"
+  },
+  {
+   "id": "m153",
+   "user": "bad_vibes_bev",
+   "text": "this stream is dogwater and so is the streamer, ugly and boring",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult and body shaming"
+  },
+  {
+   "id": "m154",
+   "user": "angry_andy",
+   "text": "I'm coming to your place this weekend Kira, I know your street",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Credible threat to show up, escalate"
+  },
+  {
+   "id": "m155",
+   "user": "blue_jay_bj",
+   "text": "actually the quest says north not south",
+   "lang": "en",
+   "label": "allow",
+   "note": "Mild backseating"
+  },
+  {
+   "id": "m156",
+   "user": "lowtide_larry",
+   "text": "hey chat what did I miss",
+   "lang": "en",
+   "label": "allow",
+   "note": "Casual chat question"
+  },
+  {
+   "id": "m157",
+   "user": "mean_mark",
+   "text": "lol look at that fat face on cam, no wonder you hide",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Body shaming streamer"
+  },
+  {
+   "id": "m158",
+   "user": "viol3tfern",
+   "text": "I love how Kira talks to the NPCs <3",
+   "lang": "en",
+   "label": "allow",
+   "note": "Wholesome comment"
+  },
+  {
+   "id": "m159",
+   "user": "takoyaki_tak",
+   "text": "キラさん、今日は何時まで配信しますか？",
+   "lang": "ja",
+   "label": "allow",
+   "note": "Japanese question to streamer"
+  },
+  {
+   "id": "m160",
+   "user": "troll_tom",
+   "text": "Kira you are so bad at this game, quit streaming",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insult aimed at streamer"
+  },
+  {
+   "id": "m161",
+   "user": "brokenpixel",
+   "text": "you're gonna burn the whole village down aren't you KEKW",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game-violence joke, fine"
+  },
+  {
+   "id": "m162",
+   "user": "amberlynx",
+   "text": "Ok but who designs these creature models, they're awesome",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game appreciation"
+  },
+  {
+   "id": "m163",
+   "user": "lunar_tuna",
+   "text": "sure, because dying 5 times to the same wolf is definitely 'strategy' LUL",
+   "lang": "en",
+   "label": "allow",
+   "note": "Sarcastic joke, not abusive"
+  },
+  {
+   "id": "m164",
+   "user": "sakura_neko",
+   "text": "このボス強すぎるｗｗｗ",
+   "lang": "ja",
+   "label": "allow",
+   "note": "Japanese joke about boss difficulty"
+  },
+  {
+   "id": "m165",
+   "user": "mate_mauro",
+   "text": "buenísimo el stream hoy, gracias Kira <3",
+   "lang": "es",
+   "label": "allow",
+   "note": "Spanish positive comment"
+  },
+  {
+   "id": "m166",
+   "user": "fennel_fan",
+   "text": "the draw distance in this game is unreal",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game talk, positive"
+  },
+  {
+   "id": "m167",
+   "user": "duskrunner",
+   "text": "lol that bear had 1 hp and you ran away",
+   "lang": "en",
+   "label": "allow",
+   "note": "Teasing about gameplay, fine"
+  },
+  {
+   "id": "m168",
+   "user": "peppermint_pj",
+   "text": "I am going to destroy you in the arena later, ranked rematch on friday",
+   "lang": "en",
+   "label": "allow",
+   "note": "Competitive trash talk among friends"
+  },
+  {
+   "id": "m169",
+   "user": "xXfreemoneyXx",
+   "text": "earn $500/day from home!!! no experience!!! message me",
+   "lang": "en",
+   "label": "hide_spam",
+   "note": "Get-rich-quick spam"
+  },
+  {
+   "id": "m170",
+   "user": "rustyhinge",
+   "text": "oh no not the lava level again LUL",
+   "lang": "en",
+   "label": "allow",
+   "note": "Joke about game level"
+  },
+  {
+   "id": "m171",
+   "user": "gross_greg",
+   "text": "Kira has the personality of a wet sock, worthless streamer",
+   "lang": "en",
+   "label": "hide_abuse",
+   "note": "Insults aimed at streamer"
+  },
+  {
+   "id": "m172",
+   "user": "rheinwasser",
+   "text": "Ist das Spiel auch auf Deutsch verfügbar?",
+   "lang": "de",
+   "label": "allow",
+   "note": "German game question"
+  },
+  {
+   "id": "m173",
+   "user": "sorrel_sam",
+   "text": "mods can we get a Kira's cat emote pls",
+   "lang": "en",
+   "label": "allow",
+   "note": "Request for emote"
+  },
+  {
+   "id": "m174",
+   "user": "viewerbot_jp",
+   "text": "フォロワー購入はこちら bigstreamz-boost.biz 格安！",
+   "lang": "ja",
+   "label": "hide_spam",
+   "note": "Japanese follower-selling spam link"
+  },
+  {
+   "id": "m175",
+   "user": "cinderbean",
+   "text": "that was a skill issue and I say that with love",
+   "lang": "en",
+   "label": "allow",
+   "note": "Light teasing, friendly"
+  },
+  {
+   "id": "m176",
+   "user": "MossyMike",
+   "text": "anyone know where the ember shard vendor is?",
+   "lang": "en",
+   "label": "allow",
+   "note": "Game help question"
+  },
+  {
+   "id": "m177",
+   "user": "lonely_leaf",
+   "text": "honestly I dont really want to be here anymore, I think about hurting myself a lot lately",
+   "lang": "en",
+   "label": "escalate",
+   "note": "Possible self-harm statement, needs human"
+  },
+  {
+   "id": "m178",
+   "user": "baguette_bandit",
+   "text": "Kira, tu joues depuis combien de temps ?",
+   "lang": "fr",
+   "label": "allow",
+   "note": "French question to streamer"
+  },
+  {
+   "id": "m179",
+   "user": "p1xelgrandma",
+   "text": "my cat is sitting on the keyboard so if I say something weird sorry",
+   "lang": "en",
+   "label": "allow",
+   "note": "Harmless chat message"
+  },
+  {
+   "id": "m180",
+   "user": "doodle_dan",
+   "text": "wow, such a quiet, peaceful, totally-not-on-fire village",
+   "lang": "en",
+   "label": "allow",
+   "note": "Sarcasm about game, fine"
+  }
+ ]
+}

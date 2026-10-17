@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firehose — every chat message moderated live with s1-fast · Decision Models</title>
+<meta name="description" content="A live stream chat where every single message is moderated by s1-fast from decisionmodels.io before it is shown. Live decisions per second and latency, next to recorded Jev 1.14.0 measurements.">
+<link rel="icon" href="/shared/favicon.svg">
+<link rel="stylesheet" href="/shared/base.css">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="https://decisionmodels.io"><img src="/shared/favicon.svg" width="26" height="26" alt="">Decision Models <span class="muted">· demos</span></a>
+    <nav>
+      <a class="on" href="https://dm-speed.app.mintapis.com">Speed</a>
+      <a href="https://dm-smarter.app.mintapis.com">Smarter</a>
+      <a href="https://dm-specialists.app.mintapis.com">Specialists</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Demo 1 · speed · s1-fast</div>
+    <h1>Every chat message moderated <span class="em">before it hits the screen.</span></h1>
+    <p class="lead">A live stream chat gets dozens of messages a second. Here, each one gets a real moderation decision from <b>s1-fast</b> on api.decisionmodels.io (allow, hide spam, hide abuse or escalate to a human) before it appears. Press the button and 60 messages arrive at once.</p>
+    <div class="actions">
+      <button id="go" class="btn">Unleash 60 messages</button>
+      <span id="note" class="muted small"></span>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="card"><div class="eyebrow">Decisions / second</div><div class="stat" id="s-rate">–</div></div>
+    <div class="card"><div class="eyebrow">Latency p50 · round trip</div><div class="stat" id="s-p50">–<small>ms</small></div></div>
+    <div class="card"><div class="eyebrow">Latency p95 · round trip</div><div class="stat" id="s-p95">–<small>ms</small></div></div>
+    <div class="card"><div class="eyebrow">All 60 decided after</div><div class="stat" id="s-wall">–<small>ms</small></div></div>
+  </section>
+
+  <section class="lanes">
+    <div class="card lane">
+      <div class="lane-head"><span class="pill s1">s1-fast · live</span><span class="muted small" id="s1-count">0 / 60</span></div>
+      <div class="bar"><div id="s1-bar"></div></div>
+      <ol id="chat" class="chat" aria-live="polite"></ol>
+    </div>
+    <div class="card lane">
+      <div class="lane-head"><span class="pill jev">Jev 1.14.0 · recorded replay</span><span class="muted small" id="jev-count">0 / 60</span></div>
+      <div class="bar jevbar"><div id="jev-bar"></div></div>
+      <p class="muted small" id="jev-explain">Same kind of burst (60 messages, 12 in parallel, same question) sent to Jev 1.14.0 from the same server on <span class="rec-date"></span>. Replayed here at its measured timing. No live Jev calls are made from this page.</p>
+      <ol id="jevchat" class="chat dim"></ol>
+    </div>
+  </section>
+
+  <section class="card typer">
+    <div class="eyebrow">Your turn · one decision per keystroke</div>
+    <h2>Type a chat message. It is re-moderated on every keystroke.</h2>
+    <input id="typed" class="typed" type="text" maxlength="400" autocomplete="off" spellcheck="false" placeholder="e.g. free emberfall skins at emb3r-gifts.xyz, hurry!!">
+    <div class="verdict"><span id="v-choice" class="badge">waiting for you</span><span id="v-ms" class="mono muted"></span><span id="v-count" class="mono muted"></span></div>
+    <p class="muted small">Each keystroke sends the whole message to s1-fast. If you type faster than decisions return, only the newest text is sent.</p>
+  </section>
+
+  <section class="card measured">
+    <div class="eyebrow">Measured, not claimed</div>
+    <h2>Same 180 chat messages, same server, one request at a time</h2>
+    <div id="table"></div>
+    <p class="muted small" id="method"></p>
+  </section>
+
+  <footer class="foot">
+    <p><b>How this works.</b> The page never sees an API key. Our server calls <span class="mono">POST https://api.decisionmodels.io/v1/systemone</span> with model <span class="mono">s1-fast</span> and one <span class="mono">choice</span> question, the same request format Jev uses ("Jev-compatible"). The live budget is shared by all visitors and capped below the account limit; when it is used up you see a replay of the most recent live run, and the page says so.</p>
+    <p>The chat is synthetic, written for this demo; the "intended" labels are the author's, not a benchmark. Jev is a model by TypeSafe; Jev numbers on this page are our own recorded measurements with the date shown. This chat is easy for both models. On the harder public JevBench items (our run on 17 Oct 2026, 297 items) s1-fast picks the right answer 80.5 % of the time against Jev 1.14.0's 86.9 %. s1-fast trades accuracy for speed; for harder decisions, <a href="https://dm-smarter.app.mintapis.com">s1-pro</a> scores 89.9 % on the same items.</p>
+    <p><a href="https://decisionmodels.io">decisionmodels.io</a> · <a href="https://decisionmodels.io/docs">API docs</a> · <a href="https://decisionmodels.io/pricing">pricing</a></p>
+  </footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

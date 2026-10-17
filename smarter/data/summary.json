@@ -1,0 +1,771 @@
+{
+ "date": "2026-10-17",
+ "set": "JevBench v1.6.1 public set (300 open items, not sealed); 3 over-long items fail on every model, 297 compared",
+ "models": {
+  "jev": "Jev 1.14.0 (TypeSafe API, model jev-1.14.0)",
+  "pro": "s1-pro (served as s1-pro-3, vLLM-SR d3 26B)",
+  "fast": "s1-fast (served as s1-fast-2)"
+ },
+ "overall": {
+  "jev": {
+   "n": 297,
+   "hit": 258,
+   "acc": 0.8687,
+   "logloss": 0.3586
+  },
+  "pro": {
+   "n": 297,
+   "hit": 267,
+   "acc": 0.899,
+   "logloss": 0.232
+  },
+  "fast": {
+   "n": 297,
+   "hit": 239,
+   "acc": 0.8047,
+   "logloss": 0.4448
+  }
+ },
+ "pro_right_jev_wrong": [
+  "v16-997b5ac56fb7ce",
+  "v16-6a6e4d3f8763d2",
+  "v16-c5a791b2739cc2",
+  "v16-1b62f119ad01dd",
+  "v16-927b0c96097366",
+  "v16-fe9831c5efa0d3",
+  "v16-2d637e55ffe8ee",
+  "v16-503ea54c100f40",
+  "v16-7263ffaa4a8383",
+  "v16-8593cc7e4a2cbb",
+  "v16-a0dea661f72978",
+  "v16-44d9939b467cde",
+  "v16-4312a60941bfe5",
+  "v16-d2dd000460582f",
+  "v16-a73b5b2bf3e308",
+  "v16-5c5da00360fce8",
+  "v16-608749256554fb",
+  "v16-ac68ddc4bb38c4",
+  "v16-6587a38277f374",
+  "v16-c9dbc0b548ffea",
+  "v16-81eb961430cbb0"
+ ],
+ "jev_right_pro_wrong": [
+  "v16-187e663f14853a",
+  "v16-5010adc95f3077",
+  "v16-f1cf024f7e52a9",
+  "v16-37348d69abd3d7",
+  "v16-22304fa8506377",
+  "v16-d6ab6056574d08",
+  "v16-3bb45ad1d33d89",
+  "v16-3559400676d6d4",
+  "v16-7e250b5dd4d5d8",
+  "v16-c5e23b358bcd08",
+  "v16-da12f876d4fb0a",
+  "v16-6314d02dcf17ed"
+ ],
+ "by_family": {
+  "llm_router": {
+   "n": 85,
+   "jev": 73,
+   "pro": 78,
+   "fast": 70
+  },
+  "calibration_gen": {
+   "n": 12,
+   "jev": 10,
+   "pro": 9,
+   "fast": 7
+  },
+  "multilingual": {
+   "n": 58,
+   "jev": 47,
+   "pro": 49,
+   "fast": 39
+  },
+  "negation_pair_gen": {
+   "n": 18,
+   "jev": 18,
+   "pro": 18,
+   "fast": 18
+  },
+  "fairness": {
+   "n": 15,
+   "jev": 15,
+   "pro": 15,
+   "fast": 15
+  },
+  "perturb_pair": {
+   "n": 24,
+   "jev": 24,
+   "pro": 22,
+   "fast": 23
+  },
+  "option_order": {
+   "n": 21,
+   "jev": 21,
+   "pro": 21,
+   "fast": 21
+  },
+  "usecase": {
+   "n": 25,
+   "jev": 17,
+   "pro": 20,
+   "fast": 15
+  },
+  "calibration": {
+   "n": 2,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "jaggedness": {
+   "n": 20,
+   "jev": 15,
+   "pro": 18,
+   "fast": 13
+  },
+  "composite_gen": {
+   "n": 17,
+   "jev": 16,
+   "pro": 15,
+   "fast": 16
+  }
+ },
+ "by_lang": {
+  "en": {
+   "n": 217,
+   "jev": 194,
+   "pro": 199,
+   "fast": 182
+  },
+  "no": {
+   "n": 2,
+   "jev": 1,
+   "pro": 2,
+   "fast": 2
+  },
+  "pl": {
+   "n": 11,
+   "jev": 9,
+   "pro": 10,
+   "fast": 8
+  },
+  "de": {
+   "n": 11,
+   "jev": 10,
+   "pro": 10,
+   "fast": 9
+  },
+  "es": {
+   "n": 4,
+   "jev": 3,
+   "pro": 3,
+   "fast": 3
+  },
+  "pt": {
+   "n": 7,
+   "jev": 6,
+   "pro": 7,
+   "fast": 7
+  },
+  "sv": {
+   "n": 2,
+   "jev": 1,
+   "pro": 1,
+   "fast": 0
+  },
+  "zh": {
+   "n": 6,
+   "jev": 6,
+   "pro": 6,
+   "fast": 6
+  },
+  "ar": {
+   "n": 5,
+   "jev": 5,
+   "pro": 5,
+   "fast": 3
+  },
+  "ja": {
+   "n": 5,
+   "jev": 3,
+   "pro": 5,
+   "fast": 2
+  },
+  "da": {
+   "n": 2,
+   "jev": 1,
+   "pro": 1,
+   "fast": 0
+  },
+  "mixed": {
+   "n": 2,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "tr": {
+   "n": 2,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "fi": {
+   "n": 1,
+   "jev": 1,
+   "pro": 1,
+   "fast": 1
+  },
+  "el": {
+   "n": 4,
+   "jev": 2,
+   "pro": 2,
+   "fast": 1
+  },
+  "ko": {
+   "n": 2,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "fr": {
+   "n": 1,
+   "jev": 1,
+   "pro": 1,
+   "fast": 1
+  },
+  "cs": {
+   "n": 2,
+   "jev": 1,
+   "pro": 1,
+   "fast": 1
+  },
+  "nl": {
+   "n": 2,
+   "jev": 1,
+   "pro": 0,
+   "fast": 0
+  },
+  "it": {
+   "n": 2,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "uk": {
+   "n": 3,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "hi": {
+   "n": 3,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "id": {
+   "n": 1,
+   "jev": 1,
+   "pro": 1,
+   "fast": 1
+  }
+ },
+ "by_usecase": {
+  "model_routing": {
+   "n": 75,
+   "jev": 66,
+   "pro": 68,
+   "fast": 66
+  },
+  "core (no use case)": {
+   "n": 170,
+   "jev": 157,
+   "pro": 161,
+   "fast": 143
+  },
+  "financial_crime": {
+   "n": 4,
+   "jev": 2,
+   "pro": 3,
+   "fast": 2
+  },
+  "ecommerce_marketplaces": {
+   "n": 2,
+   "jev": 1,
+   "pro": 1,
+   "fast": 1
+  },
+  "recruiting": {
+   "n": 1,
+   "jev": 1,
+   "pro": 1,
+   "fast": 1
+  },
+  "advertising": {
+   "n": 3,
+   "jev": 3,
+   "pro": 3,
+   "fast": 2
+  },
+  "search_retrieval": {
+   "n": 5,
+   "jev": 5,
+   "pro": 5,
+   "fast": 5
+  },
+  "gaming": {
+   "n": 3,
+   "jev": 2,
+   "pro": 1,
+   "fast": 0
+  },
+  "code_linting": {
+   "n": 3,
+   "jev": 2,
+   "pro": 3,
+   "fast": 2
+  },
+  "lead_generation": {
+   "n": 3,
+   "jev": 2,
+   "pro": 3,
+   "fast": 2
+  },
+  "risk_assessment": {
+   "n": 1,
+   "jev": 1,
+   "pro": 1,
+   "fast": 0
+  },
+  "feature_extraction": {
+   "n": 5,
+   "jev": 2,
+   "pro": 3,
+   "fast": 4
+  },
+  "knowledge_graphs": {
+   "n": 3,
+   "jev": 3,
+   "pro": 3,
+   "fast": 3
+  },
+  "customer_support": {
+   "n": 3,
+   "jev": 1,
+   "pro": 2,
+   "fast": 1
+  },
+  "scientific_discovery": {
+   "n": 2,
+   "jev": 2,
+   "pro": 2,
+   "fast": 2
+  },
+  "moderation_trust_safety": {
+   "n": 3,
+   "jev": 3,
+   "pro": 2,
+   "fast": 2
+  },
+  "demand_forecasting": {
+   "n": 3,
+   "jev": 0,
+   "pro": 0,
+   "fast": 0
+  },
+  "llm_guardrails": {
+   "n": 5,
+   "jev": 4,
+   "pro": 4,
+   "fast": 3
+  },
+  "legal_compliance": {
+   "n": 1,
+   "jev": 0,
+   "pro": 0,
+   "fast": 0
+  },
+  "insurance_claims": {
+   "n": 2,
+   "jev": 1,
+   "pro": 1,
+   "fast": 0
+  }
+ },
+ "release": {
+  "revision": "v1.6.27",
+  "draw": "v1.6-regular-20261012",
+  "metric": "Chance-corrected competence (0 = chance, 100 = perfect) over the category's items the system saw, open and sealed pooled, tiers pooled: per request type the method's competence cell, then the mean over the request types present. Not part of the JevBench Score; never equated for API systems; compare systems within a category, not categories with each other. Values can be negative (below chance).",
+  "capability": {
+   "jev": 75.01,
+   "pro": 82.97
+  },
+  "families": [
+   {
+    "key": "ml_usecase",
+    "label": "Ml usecase",
+    "covers": "ml_usecase",
+    "n": 27,
+    "low_n": true,
+    "jev": 4.8,
+    "pro": 40.3
+   },
+   {
+    "key": "calibration",
+    "label": "Calibration (fixed)",
+    "covers": "items with known answer frequencies that test the reported confidence",
+    "n": 22,
+    "low_n": true,
+    "jev": 48.4,
+    "pro": 79.7
+   },
+   {
+    "key": "multilingual",
+    "label": "Multilingual",
+    "covers": "the same kind of decision asked in 21 languages besides English",
+    "n": 275,
+    "low_n": false,
+    "jev": 40.8,
+    "pro": 63.8
+   },
+   {
+    "key": "usecase",
+    "label": "Use-case decisions",
+    "covers": "single decisions from the TypeSafe use-case map outside routing",
+    "n": 220,
+    "low_n": false,
+    "jev": 45.1,
+    "pro": 61.4
+   },
+   {
+    "key": "llm_router",
+    "label": "LLM routing",
+    "covers": "pick the model, tier or agent that should handle a request (TypeSafe LLM Auto Router focus)",
+    "n": 313,
+    "low_n": false,
+    "jev": 69.9,
+    "pro": 85.2
+   },
+   {
+    "key": "jaggedness",
+    "label": "Jaggedness",
+    "covers": "easy-looking items from areas where models fail unevenly",
+    "n": 180,
+    "low_n": false,
+    "jev": 41.6,
+    "pro": 54.0
+   },
+   {
+    "key": "option_order",
+    "label": "Option-order robustness",
+    "covers": "the same question with shuffled answer options",
+    "n": 48,
+    "low_n": false,
+    "jev": 89.3,
+    "pro": 97.3
+   },
+   {
+    "key": "negation_pair_gen",
+    "label": "Negation consistency",
+    "covers": "pairs where a negation must flip the answer",
+    "n": 86,
+    "low_n": false,
+    "jev": 71.2,
+    "pro": 78.2
+   },
+   {
+    "key": "composite_gen",
+    "label": "Composite rules",
+    "covers": "several conditions that must all be checked before deciding",
+    "n": 101,
+    "low_n": false,
+    "jev": 83.1,
+    "pro": 89.0
+   },
+   {
+    "key": "perturb_pair",
+    "label": "Perturbation consistency",
+    "covers": "pairs that differ in an irrelevant detail and must get the same answer",
+    "n": 64,
+    "low_n": false,
+    "jev": 81.6,
+    "pro": 86.0
+   },
+   {
+    "key": "long_state",
+    "label": "Long state",
+    "covers": "decisions that depend on a long input state",
+    "n": 15,
+    "low_n": true,
+    "jev": 0.0,
+    "pro": 3.9
+   },
+   {
+    "key": "fairness",
+    "label": "Fairness",
+    "covers": "decisions whose answer must not change with a protected attribute",
+    "n": 48,
+    "low_n": false,
+    "jev": 83.6,
+    "pro": 85.8
+   },
+   {
+    "key": "calibration_gen",
+    "label": "Calibration (generated)",
+    "covers": "generated items that test confidence against outcome rates",
+    "n": 101,
+    "low_n": false,
+    "jev": 75.8,
+    "pro": 61.3
+   }
+  ],
+  "languages": [
+   {
+    "key": "ar",
+    "label": "Arabic",
+    "covers": "items written in Arabic",
+    "n": 16,
+    "low_n": true,
+    "jev": 0.0,
+    "pro": 69.2
+   },
+   {
+    "key": "ja",
+    "label": "Japanese",
+    "covers": "items written in Japanese",
+    "n": 25,
+    "low_n": true,
+    "jev": 0.4,
+    "pro": 39.0
+   },
+   {
+    "key": "pl",
+    "label": "Polish",
+    "covers": "items written in Polish",
+    "n": 39,
+    "low_n": false,
+    "jev": 42.0,
+    "pro": 79.4
+   },
+   {
+    "key": "it",
+    "label": "Italian",
+    "covers": "items written in Italian",
+    "n": 15,
+    "low_n": true,
+    "jev": 51.5,
+    "pro": 73.4
+   },
+   {
+    "key": "hi",
+    "label": "Hindi",
+    "covers": "items written in Hindi",
+    "n": 21,
+    "low_n": true,
+    "jev": 38.8,
+    "pro": 50.9
+   },
+   {
+    "key": "en",
+    "label": "English",
+    "covers": "items written in English",
+    "n": 1151,
+    "low_n": false,
+    "jev": 63.4,
+    "pro": 75.0
+   },
+   {
+    "key": "el",
+    "label": "Greek",
+    "covers": "items written in Greek",
+    "n": 15,
+    "low_n": true,
+    "jev": 44.2,
+    "pro": 55.5
+   },
+   {
+    "key": "de",
+    "label": "German",
+    "covers": "items written in German",
+    "n": 32,
+    "low_n": false,
+    "jev": 75.2,
+    "pro": 85.6
+   },
+   {
+    "key": "pt",
+    "label": "Portuguese",
+    "covers": "items written in Portuguese",
+    "n": 28,
+    "low_n": true,
+    "jev": 73.4,
+    "pro": 79.2
+   },
+   {
+    "key": "es",
+    "label": "Spanish",
+    "covers": "items written in Spanish",
+    "n": 31,
+    "low_n": false,
+    "jev": 72.9,
+    "pro": 73.3
+   }
+  ],
+  "usecases": [
+   {
+    "key": "code_linting",
+    "label": "Semantic code linting",
+    "covers": "checking code or writing against conventions and guidelines, as in CI review of code",
+    "n": 24,
+    "low_n": true,
+    "jev": 31.7,
+    "pro": 89.3
+   },
+   {
+    "key": "gaming",
+    "label": "Gaming",
+    "covers": "player reports, in-game chat, game support",
+    "n": 22,
+    "low_n": true,
+    "jev": 30.0,
+    "pro": 71.0
+   },
+   {
+    "key": "knowledge_graphs",
+    "label": "Graphs and knowledge graphs",
+    "covers": "entity types, relationships between records, contradictions between facts, multi-step lookups across linked facts",
+    "n": 22,
+    "low_n": true,
+    "jev": 38.5,
+    "pro": 79.0
+   },
+   {
+    "key": "risk_assessment",
+    "label": "Risk assessment",
+    "covers": "estimating probabilities and severity of risks, incidents, vendor or underwriting risk",
+    "n": 18,
+    "low_n": true,
+    "jev": 9.8,
+    "pro": 37.7
+   },
+   {
+    "key": "feature_extraction",
+    "label": "Feature extraction for predictive modeling",
+    "covers": "turning natural-language data into probabilistic features or estimates for a downstream prediction",
+    "n": 19,
+    "low_n": true,
+    "jev": 13.1,
+    "pro": 40.8
+   },
+   {
+    "key": "recruiting",
+    "label": "Recruiting",
+    "covers": "resumes, applications, interview feedback, matching candidates to roles",
+    "n": 18,
+    "low_n": true,
+    "jev": 31.9,
+    "pro": 59.3
+   },
+   {
+    "key": "lead_generation",
+    "label": "Lead generation",
+    "covers": "matching companies or inbound messages to an ideal customer profile, buyer intent, prioritising and routing sales leads",
+    "n": 25,
+    "low_n": true,
+    "jev": 43.9,
+    "pro": 70.0
+   },
+   {
+    "key": "scientific_discovery",
+    "label": "Scientific discovery",
+    "covers": "screening papers, labelling research passages or survey answers, checking that citations support claims, methodology checks",
+    "n": 23,
+    "low_n": true,
+    "jev": 9.1,
+    "pro": 28.6
+   },
+   {
+    "key": "search_retrieval",
+    "label": "Search and retrieval",
+    "covers": "scoring query-to-candidate relevance, reranking results, selecting useful context for RAG",
+    "n": 24,
+    "low_n": true,
+    "jev": 83.1,
+    "pro": 99.9
+   },
+   {
+    "key": "advertising",
+    "label": "Advertising",
+    "covers": "ad creatives, campaign copy, brand safety, prohibited claims in ads",
+    "n": 22,
+    "low_n": true,
+    "jev": 6.1,
+    "pro": 19.1
+   },
+   {
+    "key": "ecommerce_marketplaces",
+    "label": "E-commerce marketplaces",
+    "covers": "product listings, product attributes, orders and deliveries, seller catalog policy",
+    "n": 17,
+    "low_n": true,
+    "jev": 30.2,
+    "pro": 39.5
+   },
+   {
+    "key": "model_routing",
+    "label": "Model routing",
+    "covers": "deciding which LLM or model tier should handle a prompt; classifying a request's intent, domain, difficulty or risk to pick a model",
+    "n": 217,
+    "low_n": false,
+    "jev": 70.6,
+    "pro": 79.7
+   },
+   {
+    "key": "moderation_trust_safety",
+    "label": "Moderation and trust and safety",
+    "covers": "user content moderation: toxicity, harassment, spam, unsafe advice, personal data exposure",
+    "n": 18,
+    "low_n": true,
+    "jev": 8.9,
+    "pro": 14.0
+   },
+   {
+    "key": "financial_crime",
+    "label": "Financial crime",
+    "covers": "suspicious transactions, KYC, fraud alerts, entity matching for investigations",
+    "n": 30,
+    "low_n": false,
+    "jev": 49.7,
+    "pro": 53.9
+   },
+   {
+    "key": "demand_forecasting",
+    "label": "Demand forecasting",
+    "covers": "purchase intent, product interest, demand and supply signals for forecasting",
+    "n": 17,
+    "low_n": true,
+    "jev": 0.0,
+    "pro": 0.0
+   },
+   {
+    "key": "insurance_claims",
+    "label": "Insurance claims",
+    "covers": "first-notice-of-loss reports, claim complexity, missing information, claim triage",
+    "n": 15,
+    "low_n": true,
+    "jev": 18.7,
+    "pro": 14.0
+   },
+   {
+    "key": "llm_guardrails",
+    "label": "LLM guardrails",
+    "covers": "checking LLM inputs, outputs and tool calls: prompt injection, jailbreaks, policy violations, tool-call errors, answer quality",
+    "n": 27,
+    "low_n": true,
+    "jev": 71.5,
+    "pro": 61.7
+   }
+  ]
+ }
+}

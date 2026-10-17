@@ -1,0 +1,45 @@
+/* Shared look for the decisionmodels.io demos — Decision Models brand tokens, dark theme. */
+@font-face { font-family: "Inter Tight"; src: url("/shared/fonts/inter-tight-latin.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Inter Tight"; src: url("/shared/fonts/inter-tight-latin-ext.woff2") format("woff2"); font-weight: 100 900; font-display: swap; unicode-range: U+0100-024F, U+1E00-1EFF; }
+@font-face { font-family: "Inter"; src: url("/shared/fonts/inter-latin.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/shared/fonts/inter-latin-ext.woff2") format("woff2"); font-weight: 100 900; font-display: swap; unicode-range: U+0100-024F, U+1E00-1EFF; }
+@font-face { font-family: "IBM Plex Mono"; src: url("/shared/fonts/ibm-plex-mono-latin-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("/shared/fonts/ibm-plex-mono-latin-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+:root {
+  --ink: #0B0C0E; --surface: #16191C; --surface-2: #1D2125; --line: #30363A; --muted: #A8ADB1;
+  --bone: #F5F6F3; --emerald: #12B886; --emerald-dim: #0E9F71; --emerald-wash: rgba(18,184,134,.12);
+  --amber: #F1CE78; --amber-wash: rgba(241,206,120,.12); --red: #F0806E; --red-wash: rgba(240,128,110,.13);
+  --blue: #A7C1FA; --blue-wash: rgba(167,193,250,.12);
+  --jev: #B9A6F5; --jev-wash: rgba(185,166,245,.12);
+  --display: "Inter Tight", Inter, system-ui, sans-serif; --text: Inter, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace; --radius: 10px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--ink); color: var(--bone); font-family: var(--text); font-size: 15px; line-height: 1.5; }
+a { color: var(--emerald); }
+h1, h2, h3 { font-family: var(--display); letter-spacing: -0.025em; font-weight: 640; margin: 0; }
+h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.08; }
+h2 { font-size: 22px; }
+.eyebrow { font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; font-size: 12px; color: var(--muted); }
+.mono { font-family: var(--mono); }
+.muted { color: var(--muted); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 22px; }
+header.top { display: flex; align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+header.top .brand { display: flex; align-items: center; gap: 10px; color: var(--bone); text-decoration: none; font-family: var(--display); font-weight: 620; }
+header.top nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
+header.top nav a { color: var(--muted); text-decoration: none; }
+header.top nav a.on, header.top nav a:hover { color: var(--bone); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+.btn { font: 600 15px var(--text); border: 0; border-radius: 999px; padding: 11px 20px; cursor: pointer; background: var(--emerald); color: #04130D; }
+.btn:disabled { opacity: .5; cursor: default; }
+.btn.ghost { background: transparent; color: var(--bone); border: 1px solid var(--line); }
+.pill { display: inline-block; font: 500 12px var(--mono); padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.pill.s1 { color: var(--emerald); border-color: rgba(18,184,134,.45); background: var(--emerald-wash); }
+.pill.jev { color: var(--jev); border-color: rgba(185,166,245,.45); background: var(--jev-wash); }
+.stat { font: 600 34px var(--display); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.stat small { font: 500 13px var(--mono); color: var(--muted); letter-spacing: 0; margin-left: 4px; }
+footer.foot { border-top: 1px solid var(--line); margin-top: 48px; padding: 22px 0 40px; color: var(--muted); font-size: 13px; }
+footer.foot p { margin: 4px 0; max-width: 900px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } header.top nav { display: none; } }

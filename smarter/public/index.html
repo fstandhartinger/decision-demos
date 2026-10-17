@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smarter — s1-pro on the hard decisions · Decision Models</title>
+<meta name="description" content="s1-pro from decisionmodels.io against Jev 1.14.0 on JevBench: published capability score, today's run on the public set, every one of the 297 items browsable, and live s1-pro calls.">
+<link rel="icon" href="/shared/favicon.svg">
+<link rel="stylesheet" href="/shared/base.css">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="https://decisionmodels.io"><img src="/shared/favicon.svg" width="26" height="26" alt="">Decision Models <span class="muted">· demos</span></a>
+    <nav>
+      <a href="https://dm-speed.app.mintapis.com">Speed</a>
+      <a class="on" href="https://dm-smarter.app.mintapis.com">Smarter</a>
+      <a href="https://dm-specialists.app.mintapis.com">Specialists</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Demo 2 · smarter · s1-pro</div>
+    <h1>When the decision is hard, <span class="em">s1-pro gets it right more often.</span></h1>
+    <p class="lead">We ran s1-pro and Jev 1.14.0 on the same public JevBench items, with the same request format on the same server. Below: the published scores, the item-by-item comparison (including the 12 items where Jev wins), and a way to ask s1-pro yourself.</p>
+  </section>
+
+  <section class="stats" aria-label="Headline numbers">
+    <div class="card">
+      <div class="eyebrow">JevBench Capability Score</div>
+      <div class="vs"><span class="stat s1c">82.97</span><span class="muted">vs</span><span class="stat jevc">75.01</span></div>
+      <p class="small muted"><span class="s1c">s1-pro</span> vs <span class="jevc">Jev 1.14.0</span>. Published JevBench v1.6.27, 17 Oct 2026, 1,500 items (1,200 sealed).</p>
+    </div>
+    <div class="card">
+      <div class="eyebrow">Top-1 accuracy · public set today</div>
+      <div class="vs"><span class="stat s1c">89.9<small>%</small></span><span class="muted">vs</span><span class="stat jevc">86.9<small>%</small></span></div>
+      <p class="small muted">267 vs 258 of 297 items right. s1-fast: 80.5 %. Our run, 17 Oct 2026.</p>
+    </div>
+    <div class="card">
+      <div class="eyebrow">Mean log loss · lower is better</div>
+      <div class="vs"><span class="stat s1c">0.23</span><span class="muted">vs</span><span class="stat jevc">0.36</span></div>
+      <p class="small muted">How good the probabilities are, not only the top pick.</p>
+    </div>
+    <div class="card honest">
+      <div class="eyebrow">The honest count</div>
+      <div class="stat"><span class="jevc">12</span> <small>Jev wins</small> · <span class="s1c">21</span> <small>s1-pro wins</small></div>
+      <p class="small muted">Out of 297 items, the models disagree on correctness for only 33. <a href="#explorer" data-jump="jev">See the 12 where Jev is right.</a></p>
+    </div>
+  </section>
+
+  <section class="card block" id="gap">
+    <div class="eyebrow">Published JevBench v1.6.27</div>
+    <h2>Where the gap is</h2>
+    <p class="muted small">Chance-corrected competence per category (0 = chance, 100 = perfect), open and sealed items pooled. Compare the two models within a category, not categories with each other. Categories where Jev leads are shown too.</p>
+    <div class="tabs" role="tablist" id="gap-tabs">
+      <button role="tab" aria-selected="true" data-k="usecases">Use cases</button>
+      <button role="tab" aria-selected="false" data-k="languages">Languages</button>
+      <button role="tab" aria-selected="false" data-k="families">Families</button>
+    </div>
+    <div class="legend small"><span class="pill s1">s1-pro</span><span class="pill jev">Jev 1.14.0</span><span class="muted">sorted by gap (s1-pro minus Jev); <span class="mark">small sample</span> = fewer than 30 items</span></div>
+    <ul id="gap-list" class="gaps"></ul>
+  </section>
+
+  <section class="card block" id="chain">
+    <div class="eyebrow">Illustration</div>
+    <h2>Why a few points matter in a workflow</h2>
+    <p class="muted small">A workflow often chains decisions: route, classify, approve, escalate. One wrong step spoils the result. How likely is it that all of them are right?</p>
+    <div class="chain-ctl">
+      <label for="k">Chained decisions: <b id="k-val" class="mono">10</b></label>
+      <input id="k" type="range" min="1" max="20" value="10">
+    </div>
+    <div class="chain-bars">
+      <div class="crow"><span class="pill s1">s1-pro</span><div class="track"><div id="c-pro" class="fill s1f"></div></div><span id="c-pro-v" class="mono cv"></span></div>
+      <div class="crow"><span class="pill jev">Jev 1.14.0</span><div class="track"><div id="c-jev" class="fill jevf"></div></div><span id="c-jev-v" class="mono cv"></span></div>
+    </div>
+    <p class="small muted">Illustration: assumes independent decisions at today's public-set accuracy (0.899 vs 0.869), so the chance that all k are right is accuracy<sup>k</sup>. Real workflows are not independent.</p>
+  </section>
+
+  <section class="card block" id="explorer">
+    <div class="eyebrow">Not cherry-picked: all 297 are here</div>
+    <h2>Item explorer</h2>
+    <div class="tabs" role="tablist" id="ex-tabs">
+      <button role="tab" aria-selected="true" data-k="pro">s1-pro right, Jev wrong (21)</button>
+      <button role="tab" aria-selected="false" data-k="jev">Jev right, s1-pro wrong (12)</button>
+      <button role="tab" aria-selected="false" data-k="all">All 297</button>
+    </div>
+    <div class="filters">
+      <label>Family <select id="f-family"></select></label>
+      <label>Language <select id="f-lang"></select></label>
+      <span id="ex-count" class="muted small" aria-live="polite"></span>
+    </div>
+    <div id="ex-list" class="items"></div>
+    <div class="actions"><button id="more" class="btn ghost" hidden>Show more</button></div>
+    <p class="muted small">Recorded answers are from 17 Oct 2026. "Ask s1-pro live" sends the item again; live answers can differ slightly from the recorded run.</p>
+  </section>
+
+  <section class="card block" id="custom">
+    <div class="eyebrow">Your turn</div>
+    <h2>Try your own decision</h2>
+    <form id="cf" autocomplete="off">
+      <label for="c-state">Situation (max 4000 characters)</label>
+      <textarea id="c-state" maxlength="4000" rows="6" required placeholder="e.g. Customer wrote: 'My parcel arrived with a broken lid, order 4471, I want my money back.' Order value 39 EUR, delivered 3 days ago, no prior refunds."></textarea>
+      <label for="c-q">Question</label>
+      <input id="c-q" type="text" maxlength="500" required placeholder="e.g. What should support do with this request?">
+      <label for="c-type">Answer type</label>
+      <select id="c-type"><option value="choice">Choice between options</option><option value="yesno">Yes / no</option></select>
+      <div id="c-opts" class="opts">
+        <label>Options (2 to 6)</label>
+        <div id="c-optlist"></div>
+        <button type="button" id="c-add" class="btn ghost small-btn">Add option</button>
+      </div>
+      <div class="actions"><button class="btn" id="c-go" type="submit">Ask s1-pro</button><span class="muted small">Only s1-pro is called live; Jev is not called from this site.</span></div>
+    </form>
+    <div id="c-out" aria-live="polite"></div>
+  </section>
+
+  <footer class="foot">
+    <div class="card method">
+      <h2>Method and honesty</h2>
+      <ul>
+        <li><b>Published numbers.</b> The Capability Score and the category cells come from the published JevBench v1.6.27 files (17 Oct 2026, draw v1.6-regular-20261012, 1,500 items, 1,200 sealed). s1-pro is served as s1-pro-3 (vLLM-SR d3 26B). Category values are chance-corrected competence and are not part of the JevBench Score.</li>
+        <li><b>Our own run.</b> 17 Oct 2026 on the public JevBench v1.6.1 set (300 open items). Three over-long items fail on every model, so 297 are compared. The request format is identical for both models, from the same server, one question per request. Jev answers on this page are recorded; no live Jev calls are made.</li>
+        <li><b>Top-1 is a simple metric.</b> Accuracy and log loss here are not the official JevBench score. They are easy to check, and they say less than the published score.</li>
+        <li><b>Check it yourself.</b> These are public JevBench items (open split). All 297 are browsable above, including those where s1-pro is wrong. The full board is at <a href="https://benchmarkheaven.com/jev-models">benchmarkheaven.com/jev-models</a>.</li>
+      </ul>
+    </div>
+    <p>Jev is a model by TypeSafe. "Jev-compatible" only describes the format of our API; our models are not Jev. For speed see <a href="https://dm-speed.app.mintapis.com">s1-fast</a>.</p>
+    <p><a href="https://decisionmodels.io">decisionmodels.io</a> · <a href="https://decisionmodels.io/docs">API docs</a> · <a href="https://decisionmodels.io/pricing">pricing</a></p>
+  </footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

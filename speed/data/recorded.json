@@ -1,0 +1,643 @@
+{
+ "sequential": {
+  "date": "2026-10-17",
+  "rows": [
+   {
+    "model": "s1-fast",
+    "kind": "s1",
+    "n": 180,
+    "p50": 70,
+    "p95": 130,
+    "agree_pct": 99.44444444444444,
+    "price": "$0.019 global · $0.021 EU",
+    "date": "2026-10-17",
+    "model_version": "s1-fast-2"
+   },
+   {
+    "model": "Jev 1.14.0",
+    "kind": "jev",
+    "n": 180,
+    "p50": 225,
+    "p95": 379,
+    "agree_pct": 98.88888888888889,
+    "price": "$0.042",
+    "date": "2026-10-17",
+    "model_version": "jev-1.14.0"
+   }
+  ],
+  "method": "Measured 2026-10-17 from one server in Germany: all 180 chat messages of this page, one request at a time, identical request (same state text and the same four-option choice question) to api.decisionmodels.io (model s1-fast, served as s1-fast-2) and to api.typesafe.ai (model jev-1.14.0). Round-trip latency includes the network. 'Matches intended label' compares with the demo author's own labels, which are not a benchmark. List prices from each provider's public pricing page on the same day (USD per 1M input tokens; output free on both)."
+ },
+ "jev_burst": {
+  "date": "2026-10-17",
+  "wall_ms": 1241,
+  "concurrency": 12,
+  "bursts_recorded": 3,
+  "all_walls_ms": [
+   1281,
+   1160,
+   1241
+  ],
+  "decisions": [
+   {
+    "id": "m118",
+    "user": "Schnitzel_Sven",
+    "text": "Kira, wie lange spielst du heute noch?",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 207,
+    "offset_ms": 207
+   },
+   {
+    "id": "m113",
+    "user": "copypasta_carl",
+    "text": "This is a copypasta: Navy Seal this is the greatest stream ever so give me a hug and a sub and give me a hug and a sub and give me a hug and a sub",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 207,
+    "offset_ms": 211
+   },
+   {
+    "id": "m090",
+    "user": "RiftWalkerZ",
+    "text": "@Kira link to your schedule?",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 215,
+    "offset_ms": 216
+   },
+   {
+    "id": "m060",
+    "user": "lantern_lou",
+    "text": "I'm gonna go make dinner, back in 20, dont beat the boss without me",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 221,
+    "offset_ms": 222
+   },
+   {
+    "id": "m131",
+    "user": "greenhorn_gus",
+    "text": "new here, whats the lore behind the ember crown?",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 226,
+    "offset_ms": 227
+   },
+   {
+    "id": "m094",
+    "user": "glimmer_gus",
+    "text": "You can't spell 'Emberfall' without 'fall' and I fell 6 times today",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 226,
+    "offset_ms": 229
+   },
+   {
+    "id": "m080",
+    "user": "old_man_ollie",
+    "text": "Kira's chat is the nicest on twitch, change my mind",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 229,
+    "offset_ms": 230
+   },
+   {
+    "id": "m122",
+    "user": "vengo_victor",
+    "text": "Sé dónde vives Kira, calle Falsa 123, voy a ir a verte",
+    "label": "escalate",
+    "ok": true,
+    "choice": "escalate",
+    "rtt_ms": 227,
+    "offset_ms": 231
+   },
+   {
+    "id": "m128",
+    "user": "fizzy_fig",
+    "text": "oh the sarcasm in 'great plan chat' was strong LUL",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 232,
+    "offset_ms": 235
+   },
+   {
+    "id": "m095",
+    "user": "gl1tchfox",
+    "text": "go left!! the chest is LEFT",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 240,
+    "offset_ms": 246
+   },
+   {
+    "id": "m102",
+    "user": "drift_wood",
+    "text": "that was SO close PogChamp",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 252,
+    "offset_ms": 255
+   },
+   {
+    "id": "m006",
+    "user": "pickle_pete",
+    "text": "cool, another chest with 3 gold. very worth it. truly",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 259,
+    "offset_ms": 262
+   },
+   {
+    "id": "m077",
+    "user": "vantablack_v",
+    "text": "omg the hit on that sword swing, so clean",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 207,
+    "offset_ms": 424
+   },
+   {
+    "id": "m106",
+    "user": "crispy_cricket",
+    "text": "Kira dodge LEFT not right oh no",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 227,
+    "offset_ms": 434
+   },
+   {
+    "id": "m139",
+    "user": "willow_wisp_ww",
+    "text": "sending good vibes from the UK",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 206,
+    "offset_ms": 436
+   },
+   {
+    "id": "m038",
+    "user": "stormy_steve",
+    "text": "What GPU are you running? Frame rate looks smooth",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 205,
+    "offset_ms": 439
+   },
+   {
+    "id": "m030",
+    "user": "silverfin_sf",
+    "text": "what mic are you using? sounds crisp",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 223,
+    "offset_ms": 444
+   },
+   {
+    "id": "m149",
+    "user": "phone_phil",
+    "text": "call this girl, 555-0178, she is a fake and a liar",
+    "label": "escalate",
+    "ok": true,
+    "choice": "escalate",
+    "rtt_ms": 198,
+    "offset_ms": 453
+   },
+   {
+    "id": "m127",
+    "user": "galaxybrain_gb",
+    "text": "wait is that a hidden path behind the waterfall??",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 226,
+    "offset_ms": 456
+   },
+   {
+    "id": "m004",
+    "user": "fr33_skinz_bot",
+    "text": "FREE Emberfall skins!! claim at emb3rfall-gifts.xyz before they run out",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 236,
+    "offset_ms": 463
+   },
+   {
+    "id": "m152",
+    "user": "bitter_bob",
+    "text": "what a pathetic loser, uninstall the game and your life",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 255,
+    "offset_ms": 466
+   },
+   {
+    "id": "m037",
+    "user": "ogre_otis",
+    "text": "Just hit him with the hammer, smash him to bits",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 234,
+    "offset_ms": 480
+   },
+   {
+    "id": "m143",
+    "user": "zlosnik_zdzich",
+    "text": "jestes beznadziejna, nikt cie tu nie lubi",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 231,
+    "offset_ms": 494
+   },
+   {
+    "id": "m058",
+    "user": "emberkid07",
+    "text": "ok that crit did like 9000 dmg what",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 273,
+    "offset_ms": 505
+   },
+   {
+    "id": "m052",
+    "user": "dr_noodle",
+    "text": "why does the map have 3 different compasses lol",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 210,
+    "offset_ms": 633
+   },
+   {
+    "id": "m116",
+    "user": "bot_5521",
+    "text": "Best viewers on twitch: bigstreamz-boost.biz (promo code FREE)",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 223,
+    "offset_ms": 657
+   },
+   {
+    "id": "m151",
+    "user": "ban_evader_99",
+    "text": "I got banned and I'll be back with 10 new accounts, you idiots",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 238,
+    "offset_ms": 682
+   },
+   {
+    "id": "m013",
+    "user": "saltysoup",
+    "text": "you absolute donkey you walked right into the trap LUL",
+    "label": "allow",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 244,
+    "offset_ms": 698
+   },
+   {
+    "id": "m007",
+    "user": "moon_shot_ms",
+    "text": "new coin EMBR launching, 50x easy, dont miss it",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 221,
+    "offset_ms": 701
+   },
+   {
+    "id": "m141",
+    "user": "tiny_bot_77",
+    "text": "kira kira kira kira kira kira kira kira kira kira kira kira",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 241,
+    "offset_ms": 704
+   },
+   {
+    "id": "m011",
+    "user": "kuso_ken",
+    "text": "お前下手くそすぎ、配信やめろ、ブス",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 256,
+    "offset_ms": 712
+   },
+   {
+    "id": "m075",
+    "user": "chat_bully_77",
+    "text": "@pixelmoth you're trash and everyone knows it",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 233,
+    "offset_ms": 727
+   },
+   {
+    "id": "m074",
+    "user": "zubr_zbyszek",
+    "text": "zabij smoka mieczem ognia, jest slaby na ogien",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 303,
+    "offset_ms": 739
+   },
+   {
+    "id": "m171",
+    "user": "gross_greg",
+    "text": "Kira has the personality of a wet sock, worthless streamer",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 278,
+    "offset_ms": 744
+   },
+   {
+    "id": "m155",
+    "user": "blue_jay_bj",
+    "text": "actually the quest says north not south",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 263,
+    "offset_ms": 768
+   },
+   {
+    "id": "m005",
+    "user": "kira_mod_dale",
+    "text": "Kira's schedule is in the panel below, Mon/Wed/Fri 7pm",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 338,
+    "offset_ms": 778
+   },
+   {
+    "id": "m103",
+    "user": "tangerine_tom",
+    "text": "dont forget to hydrate and stretch Kira",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 266,
+    "offset_ms": 900
+   },
+   {
+    "id": "m147",
+    "user": "zesty_lemon",
+    "text": "I would die for the soundtrack in this game",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 245,
+    "offset_ms": 902
+   },
+   {
+    "id": "m159",
+    "user": "takoyaki_tak",
+    "text": "キラさん、今日は何時まで配信しますか？",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 226,
+    "offset_ms": 908
+   },
+   {
+    "id": "m016",
+    "user": "sub4sub_sally",
+    "text": "sub4sub?? sub to me and I sub back, follow4follow too",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 222,
+    "offset_ms": 920
+   },
+   {
+    "id": "m170",
+    "user": "rustyhinge",
+    "text": "oh no not the lava level again LUL",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 229,
+    "offset_ms": 941
+   },
+   {
+    "id": "m098",
+    "user": "ghostpepperz",
+    "text": "clip it clip it CLIP IT",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 240,
+    "offset_ms": 941
+   },
+   {
+    "id": "m178",
+    "user": "baguette_bandit",
+    "text": "Kira, tu joues depuis combien de temps ?",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 236,
+    "offset_ms": 963
+   },
+   {
+    "id": "m138",
+    "user": "static_sheep",
+    "text": "OMEGALUL you tripped over a chicken",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 220,
+    "offset_ms": 964
+   },
+   {
+    "id": "m092",
+    "user": "nebula_nell",
+    "text": "Kira your chat is hilarious today <3 <3",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 266,
+    "offset_ms": 970
+   },
+   {
+    "id": "m134",
+    "user": "nobody_nate",
+    "text": "you banned me so I'll find where you live and show up, see you soon",
+    "label": "escalate",
+    "ok": true,
+    "choice": "escalate",
+    "rtt_ms": 210,
+    "offset_ms": 978
+   },
+   {
+    "id": "m051",
+    "user": "cruel_cal",
+    "text": "every mod here is a brain-dead joke",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 255,
+    "offset_ms": 994
+   },
+   {
+    "id": "m028",
+    "user": "sleepy_kettle",
+    "text": "KEKW the horse just clipped through the wall",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 218,
+    "offset_ms": 996
+   },
+   {
+    "id": "m091",
+    "user": "viewer_boost_pro",
+    "text": "Want more followers? buy followers views chat at bigstreamz-boost.biz cheap!!",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 205,
+    "offset_ms": 1104
+   },
+   {
+    "id": "m108",
+    "user": "pest_pete",
+    "text": "@duskrunner you cant even read, how dumb are you",
+    "label": "hide_abuse",
+    "ok": true,
+    "choice": "hide_abuse",
+    "rtt_ms": 220,
+    "offset_ms": 1128
+   },
+   {
+    "id": "m093",
+    "user": "pierogi_piotr",
+    "text": "Kira, ktory boss jest najtrudniejszy?",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 234,
+    "offset_ms": 1136
+   },
+   {
+    "id": "m180",
+    "user": "doodle_dan",
+    "text": "wow, such a quiet, peaceful, totally-not-on-fire village",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 216,
+    "offset_ms": 1136
+   },
+   {
+    "id": "m110",
+    "user": "inkwellian",
+    "text": "can you do a no-damage run next",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 240,
+    "offset_ms": 1180
+   },
+   {
+    "id": "m063",
+    "user": "crimson_crumb",
+    "text": "hes not even that strong just dodge the fire breath",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 231,
+    "offset_ms": 1196
+   },
+   {
+    "id": "m111",
+    "user": "mugwump_mia",
+    "text": "did the loot just drop twice or is my stream lagging",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 227,
+    "offset_ms": 1205
+   },
+   {
+    "id": "m135",
+    "user": "luna_roja_22",
+    "text": "jajaja el caballo se quedó atascado en la pared KEKW",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 210,
+    "offset_ms": 1206
+   },
+   {
+    "id": "m062",
+    "user": "stalker_stu",
+    "text": "@ashenwolf your home is 8 Sample Street, Mocktown, ZZ 12345, right?",
+    "label": "escalate",
+    "ok": true,
+    "choice": "escalate",
+    "rtt_ms": 257,
+    "offset_ms": 1220
+   },
+   {
+    "id": "m047",
+    "user": "petit_chat_noir",
+    "text": "trop bien ce passage, bravo !",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 280,
+    "offset_ms": 1222
+   },
+   {
+    "id": "m179",
+    "user": "p1xelgrandma",
+    "text": "my cat is sitting on the keyboard so if I say something weird sorry",
+    "label": "allow",
+    "ok": true,
+    "choice": "allow",
+    "rtt_ms": 252,
+    "offset_ms": 1222
+   },
+   {
+    "id": "m061",
+    "user": "loot_leak_ll",
+    "text": "LEAKED Emberfall 2 gameplay at emb3rfall-leaks.top",
+    "label": "hide_spam",
+    "ok": true,
+    "choice": "hide_spam",
+    "rtt_ms": 246,
+    "offset_ms": 1240
+   }
+  ]
+ }
+}

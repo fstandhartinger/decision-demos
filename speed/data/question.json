@@ -1,0 +1,10 @@
+{
+ "type": "choice",
+ "instructions": "You moderate the live chat of a family-friendly game stream. Decide what should happen to this chat message.",
+ "criteria": {
+  "allow": "Normal chat: banter, game talk, questions, jokes, emotes, in-game violence talk, rough but friendly teasing.",
+  "hide_spam": "Spam: scams, fake giveaways, bots selling followers, crypto shilling, link spam, copypasta flooding, unsolicited self-promotion.",
+  "hide_abuse": "Abuse: insults, harassment or demeaning remarks aimed at the streamer or another viewer.",
+  "escalate": "A human moderator must look now: self-harm signals, threats to a real person, doxxing, or posting someone's personal data."
+ }
+}
