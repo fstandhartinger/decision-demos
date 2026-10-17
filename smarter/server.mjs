@@ -36,9 +36,15 @@ function shape(qid, r) {
   const a = r.answers?.[qid];
   if (!a) return null;
   const probs = {};
-  for (const [k, v] of Object.entries(a.probabilities || {})) probs[k === 'true' ? 'yes' : k === 'false' ? 'no' : k] = v;
-  const top = a.choice === true || a.choice === 'true' ? 'yes' : a.choice === false || a.choice === 'false' ? 'no' : String(a.choice);
-  return { top, confidence: a.confidence, probs, latency_ms: Math.round(r.rtt_ms), server_ms: r.server_ms, model_version: r.model_version };
+  if (a.type === 'noul' || typeof a.noul === 'number') {
+    const p = Number(a.noul);
+    probs.yes = p; probs.no = 1 - p;
+  } else {
+    for (const [k, v] of Object.entries(a.probabilities || {})) probs[k === 'true' ? 'yes' : k === 'false' ? 'no' : k] = v;
+  }
+  const top = Object.keys(probs).reduce((x, y) => (x === null || probs[y] > probs[x] ? y : x), null);
+  const confidence = top === null ? null : probs[top];
+  return { top, confidence, probs, latency_ms: Math.round(r.rtt_ms), server_ms: r.server_ms, model_version: r.model_version };
 }
 
 async function ask(req, res) {
