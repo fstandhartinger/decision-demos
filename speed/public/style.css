@@ -42,3 +42,4 @@ table.m th, table.m td { text-align: right; padding: 8px 10px; border-bottom: 1p
 table.m th:first-child, table.m td:first-child { text-align: left; }
 table.m th { font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 @media (max-width: 860px) { .stats { grid-template-columns: 1fr 1fr; } .lanes { grid-template-columns: 1fr; } }
+.burst-h { font-size: 16px; margin: 22px 0 6px; }

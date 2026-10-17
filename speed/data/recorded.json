@@ -639,5 +639,19 @@
     "offset_ms": 1240
    }
   ]
+ },
+ "burst": {
+  "date": "2026-10-17",
+  "s1_walls_ms": [
+   877,
+   770,
+   751
+  ],
+  "jev_walls_ms": [
+   1281,
+   1160,
+   1241
+  ],
+  "note": "60 messages at once, 12 requests in parallel. s1-fast: three live runs of this page on 17 Oct 2026 (10:17-10:22 UTC), sent from the demo server, which sits in the same data centre as our API, so it has almost no network time. Jev 1.14.0: three recorded bursts the same morning, sent from our workshop server in Germany to TypeSafe's API. The network paths differ, so read this as an end-to-end illustration. The fair, like-for-like comparison is the table above (same server, one request at a time)."
  }
 }

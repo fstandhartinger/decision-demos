@@ -113,6 +113,11 @@ function renderTable() {
   if (!t) { $('table').innerHTML = '<p class="muted">Measurements are being recorded.</p>'; return; }
   const rows = t.rows.map((r) => `<tr><td><span class="pill ${r.kind}">${esc(r.model)}</span></td><td>${r.p50}</td><td>${r.p95}</td><td>${r.agree_pct.toFixed(1)} %</td><td>${esc(r.price)}</td></tr>`).join('');
   $('table').innerHTML = `<table class="m"><thead><tr><th>Model</th><th>p50 ms</th><th>p95 ms</th><th>Matches intended label</th><th>List price / 1M input tokens</th></tr></thead><tbody>${rows}</tbody></table>`;
+  const b = recorded.burst;
+  if (b) {
+    const r = (a) => `${(Math.min(...a) / 1000).toFixed(2)}–${(Math.max(...a) / 1000).toFixed(2)} s`;
+    $('table').insertAdjacentHTML('beforeend', `<h3 class="burst-h">All 60 at once (12 in parallel)</h3><table class="m"><thead><tr><th>Model</th><th>Time until all 60 are decided</th></tr></thead><tbody><tr><td><span class="pill s1">s1-fast</span></td><td>${r(b.s1_walls_ms)}</td></tr><tr><td><span class="pill jev">Jev 1.14.0</span></td><td>${r(b.jev_walls_ms)}</td></tr></tbody></table><p class="muted small">${esc(b.note)}</p>`);
+  }
   $('method').textContent = t.method;
   document.querySelectorAll('.rec-date').forEach((el) => { el.textContent = recorded.jev_burst?.date || t.date; });
 }
