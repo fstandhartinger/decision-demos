@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Specialists — small models for one job · Decision Models</title>
+<meta name="description" content="Small models trained for one job against Jev 1.14.0 on that job, measured on held-out examples: an LLM request router you can try live, plus demand-forecasting and risk-assessment models measured offline.">
+<link rel="icon" href="/shared/favicon.svg">
+<link rel="stylesheet" href="/shared/base.css">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="https://decisionmodels.io"><img src="/shared/favicon.svg" width="26" height="26" alt="">Decision Models <span class="muted">· demos</span></a>
+    <nav>
+      <a href="https://dm-speed.app.mintapis.com">Speed</a>
+      <a href="https://dm-smarter.app.mintapis.com">Smarter</a>
+      <a class="on" href="https://dm-specialists.app.mintapis.com">Specialists</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Demo 3 · specialists</div>
+    <h1>A small model trained for one job <span class="em">beats a generalist on that job.</span></h1>
+    <p class="lead">Jev 1.14.0 is TypeSafe's general model. Here it meets our use-case models, each on its own task, on held-out examples (for the two offline models we also show their public dev set, marked as such). You can try the first one live; the other two were measured offline.</p>
+    <p class="small muted"><a href="#router">A. LLM request router</a> · <a href="#forecast">B. Demand forecasting and risk assessment</a></p>
+  </section>
+
+  <section id="router">
+    <div class="sec-head"><span class="tag live">live on api.decisionmodels.io</span><h2>A. s1-llm-auto-router</h2></div>
+    <p class="muted lede">A router classifier for LLM gateways. For one user request it answers seven typed questions in a single call: what kind of request it is, how hard, how high the stakes, whether it needs tools, vision or a long context, and whether it is a follow-up. It runs on CPU, about 26 ms inside the model.</p>
+
+    <div class="stats" aria-label="Router headline numbers">
+      <div class="card">
+        <div class="eyebrow">Category accuracy</div>
+        <div class="vs"><span class="stat s1c" id="m-cat-s1"></span><span class="muted">vs</span><span class="stat jevc" id="m-cat-jev"></span></div>
+        <p class="small muted">Which of 9 kinds of request. Higher is better.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">All 7 answers exactly right</div>
+        <div class="vs"><span class="stat s1c" id="m-all-s1"></span><span class="muted">vs</span><span class="stat jevc" id="m-all-jev"></span></div>
+        <p class="small muted">Every one of the seven answers correct for the same request.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Median round trip</div>
+        <div class="vs"><span class="stat s1c" id="m-ms-s1"></span><span class="muted">vs</span><span class="stat jevc" id="m-ms-jev"></span></div>
+        <p class="small muted" id="m-ms-note"></p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Price per 1M input tokens</div>
+        <div class="vs"><span class="stat s1c" id="m-pr-s1"></span><span class="muted">vs</span><span class="stat jevc" id="m-pr-jev"></span></div>
+        <p class="small muted">List prices of the two APIs.</p>
+      </div>
+    </div>
+    <div class="legend small"><span class="pill s1">s1-llm-auto-router</span><span class="pill jev">Jev 1.14.0</span><span class="muted" id="m-date"></span></div>
+
+    <div class="card block">
+      <div class="eyebrow">Question by question</div>
+      <h3>Where the difference comes from</h3>
+      <div class="tablewrap"><table class="qt" id="qtable"></table></div>
+      <p class="small muted">Difficulty and stakes: exact level matched (difficulty 5 levels, stakes 4 levels). Flags: yes/no accuracy at p ≥ 0.5. Category calibration error (ECE): how far stated confidence is from actual accuracy, lower is better.</p>
+    </div>
+
+    <div class="card block" id="try">
+      <div class="eyebrow">Your turn · live</div>
+      <h3>Route a prompt</h3>
+      <form id="rf" autocomplete="off">
+        <label for="r-req">Paste a prompt a user might send to your AI app (max 4000 characters)</label>
+        <textarea id="r-req" maxlength="4000" rows="6" required placeholder="e.g. Our checkout service times out under load. Here is the stack trace, can you find the deadlock and fix it?"></textarea>
+        <label for="r-ctx">Context (optional, max 1000 characters)</label>
+        <input id="r-ctx" type="text" maxlength="1000" placeholder="e.g. 3 messages so far. Tools: read_file, run_terminal_cmd. Previous request: add retries to the payment client">
+        <div class="actions"><button class="btn" id="r-go" type="submit">Route it</button><button class="btn ghost" type="button" id="r-ex">Try an example</button><span class="muted small">Only s1-llm-auto-router is called live; Jev is not called from this site.</span></div>
+      </form>
+      <div id="r-out" aria-live="polite"></div>
+    </div>
+
+    <div class="card block" id="explorer">
+      <div class="eyebrow">Held-out examples · 300 drawn at random</div>
+      <h3>Browse them, including where we are wrong</h3>
+      <div class="tabs" role="tablist" id="ex-tabs">
+        <button role="tab" aria-selected="true" data-k="dis">Models disagree on category</button>
+        <button role="tab" aria-selected="false" data-k="all">All 300</button>
+      </div>
+      <div class="legend small"><span class="pill s1">s1-llm-auto-router</span><span class="pill jev">Jev 1.14.0</span><span class="muted">gold label first; <span class="okc">green</span> = matches gold, <span class="badc">red</span> = does not</span></div>
+      <span id="ex-count" class="muted small" aria-live="polite"></span>
+      <div id="ex-list" class="items"></div>
+      <div class="actions"><button id="more" class="btn ghost" hidden>Show more</button></div>
+    </div>
+  </section>
+
+  <section id="forecast">
+    <div class="sec-head"><span class="tag off">measured offline</span><h2>B. Demand forecasting and risk assessment</h2></div>
+    <div id="spec-root"></div>
+  </section>
+
+  <footer class="foot">
+    <div class="card method">
+      <h2>Method and honesty</h2>
+      <ul>
+        <li><b>Router held-out set.</b> <span id="m-set"></span></li>
+        <li><b>Same request for both.</b> <span id="m-note"></span> Jev answers on this page are our own recorded measurements from <span id="m-date2"></span>; no live Jev calls are made.</li>
+        <li><b>Labels are not perfect.</b> The gold answers come from an ensemble of LLM labellers, not from humans. Where the two models disagree with each other, look at the item and judge for yourself.</li>
+        <li><b>Offline models.</b> The demand-forecasting and risk-assessment models in section B were measured offline on our GPU. They are not yet available on api.decisionmodels.io. Only the router is live.</li>
+      </ul>
+    </div>
+    <p>Jev is a model by TypeSafe. "Jev-compatible" only describes the format of our API; our models are not Jev. For the general comparison see <a href="https://dm-smarter.app.mintapis.com">Smarter</a>.</p>
+    <p><a href="https://decisionmodels.io">decisionmodels.io</a> · <a href="https://decisionmodels.io/docs">API docs</a> · <a href="https://huggingface.co/decisionmodels/s1-llm-auto-router">s1-llm-auto-router on Hugging Face</a></p>
+  </footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

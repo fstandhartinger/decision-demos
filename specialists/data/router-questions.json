@@ -1,0 +1,70 @@
+{
+ "category": {
+  "type": "choice",
+  "instructions": "What kind of work does the assistant need to do to handle `request`?",
+  "criteria": {
+   "coding": "Write, change, review or debug code in a single self-contained step.",
+   "agentic": "Multi-step work in a codebase or system: explore files, run commands, iterate on test results.",
+   "math": "A calculation, proof or quantitative puzzle with a definite answer.",
+   "knowledge": "Factual, scientific or domain knowledge questions; explanations.",
+   "long_context": "Find or synthesise information inside a long provided document or log.",
+   "tool_use": "Operate external tools or APIs to reach a specific end state (not primarily coding).",
+   "design": "Produce or critique a user-facing web or app interface: layout, styling, components, visual hierarchy, front-end markup and CSS.",
+   "summarisation": "Condense or rewrite text that is already provided into a shorter form.",
+   "general": "Chit-chat, open writing, and anything that fits no other option."
+  }
+ },
+ "difficulty": {
+  "type": "score",
+  "instructions": "How much reasoning capability does a model need to handle `request` correctly on the first attempt, given `context`?",
+  "criteria": [
+   "Trivial: greeting, acknowledgement, one-sentence fact, obvious one-line edit",
+   "Easy: routine single step, rename, lookup, small function, standard explanation",
+   "Moderate: implement or debug one component with clear requirements, multi-step reasoning",
+   "Hard: subtle bugs, concurrency, multi-file design, olympiad-style math, ambiguous requirements",
+   "Frontier: research-grade problems where only the strongest models succeed"
+  ]
+ },
+ "needs_tools": {
+  "type": "noul",
+  "instructions": "Will handling `request` require calling tools (running code, reading files, APIs)?",
+  "criteria": {
+   "true": "Tools or command execution are needed",
+   "false": "A direct answer suffices"
+  }
+ },
+ "needs_vision": {
+  "type": "noul",
+  "instructions": "Does `request` include or refer to an image the assistant must look at?",
+  "criteria": {
+   "true": "An image must be inspected",
+   "false": "Text only"
+  }
+ },
+ "needs_long_context": {
+  "type": "noul",
+  "instructions": "Does handling `request` require reading more than about 50 pages of provided text?",
+  "criteria": {
+   "true": "Very long input must be read",
+   "false": "Short or moderate input"
+  }
+ },
+ "follow_up": {
+  "type": "noul",
+  "instructions": "Is `request` a follow-up that relies on the previous turn's work or decisions described in `context`?",
+  "criteria": {
+   "true": "Builds on or refers to earlier turns",
+   "false": "Self-contained"
+  }
+ },
+ "stakes": {
+  "type": "score",
+  "instructions": "How costly would it be if the answer to `request` were subtly wrong and nobody noticed?",
+  "criteria": [
+   "Negligible: chit-chat or throwaway output",
+   "Low: easy to spot and redo",
+   "Medium: wastes a work session or needs a later fix",
+   "High: breaks production, loses data or money, or misleads a decision"
+  ]
+ }
+}
