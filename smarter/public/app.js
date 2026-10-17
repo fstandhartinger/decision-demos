@@ -101,7 +101,7 @@ async function askLive(it, el, btn) {
     const ok = d.top === it.expected;
     out.innerHTML = `<div class="live-box"><span class="tag live">live s1-pro</span> picked <b class="mono">${esc(d.top)}</b> ${ok ? '(matches the correct answer)' : '(differs from the correct answer)'}
       <div class="opts-table">${it.labels.map((lab) => `<div class="opt"><div class="lab"><b>${esc(lab)}</b>${lab === d.top ? ' <span class="tag p1">live pick</span>' : ''}${lab === it.expected ? ' <span class="tag ok">✓ correct answer</span>' : ''}</div>${probBar(d.probs?.[lab], 's1f', 'live s1-pro')}</div>`).join('')}</div>
-      <div class="meta">${esc(d.model_version || '')} · ${d.latency_ms} ms round trip${d.server_ms ? ` · ${d.server_ms} ms on the server` : ''}. Live answers can differ slightly from the recorded run.</div></div>`;
+      <div class="meta">${esc(d.model_version || '')} · ${d.latency_ms} ms round trip${d.server_ms ? ` · ${Math.round(d.server_ms)} ms on the server` : ''}. Live answers can differ slightly from the recorded run.</div></div>`;
   } catch { out.innerHTML = '<p class="res bad">network error</p>'; } finally { btn.disabled = false; }
 }
 function renderItems(reset) {
@@ -146,7 +146,7 @@ async function submitCustom(e) {
     const keys = Object.keys(d.options);
     out.innerHTML = `<div class="live-box"><span class="tag live">live s1-pro</span> answer: <b>${esc(d.options[d.top] || d.top)}</b>
       <div class="opts-table">${keys.map((k) => `<div class="opt"><div class="lab"><b>${esc(d.options[k])}</b>${k === d.top ? ' <span class="tag p1">pick</span>' : ''}</div>${probBar(d.probs?.[k], 's1f', 's1-pro')}</div>`).join('')}</div>
-      <div class="meta">${esc(d.model_version || '')} · ${d.latency_ms} ms round trip${d.server_ms ? ` · ${d.server_ms} ms on the server` : ''}</div></div>`;
+      <div class="meta">${esc(d.model_version || '')} · ${d.latency_ms} ms round trip${d.server_ms ? ` · ${Math.round(d.server_ms)} ms on the server` : ''}</div></div>`;
   } catch { out.innerHTML = '<p class="res bad">network error</p>'; } finally { $('c-go').disabled = false; }
 }
 
