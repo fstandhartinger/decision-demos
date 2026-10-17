@@ -84,26 +84,36 @@ function run() {
 }
 
 // Per-keystroke moderation: at most one request in flight, always the newest text.
-let inflight = false, pending = null, keyCount = 0;
+// At most one request in flight and at most one every 200 ms; always the newest text.
+let inflight = false, pending = null, keyCount = 0, lastSent = 0, misses = 0;
+const GAP_MS = 200;
 async function send(text) {
   if (inflight) { pending = text; return; }
+  const wait = lastSent + GAP_MS - performance.now();
+  if (wait > 0) { pending = text; inflight = true; setTimeout(() => { inflight = false; const p = pending; pending = null; if (p !== null) send(p); }, wait); return; }
   inflight = true;
+  lastSent = performance.now();
+  let retryIn = 0;
   try {
     const r = await fetch('/api/moderate', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ text }) });
     const j = await r.json();
     if (r.ok) {
-      keyCount++;
+      keyCount++; misses = 0;
       const b = $('v-choice');
       b.className = `badge ${j.choice}`;
       b.textContent = `${j.choice}  ${(j.confidence * 100).toFixed(0)} %`;
       $('v-ms').textContent = `${j.rtt_ms} ms round trip${j.server_ms ? ` · ${Math.round(j.server_ms)} ms in the model` : ''}`;
       $('v-count').textContent = `${keyCount} decisions so far`;
+    } else if (r.status === 429) {
+      misses++; retryIn = 1000;
+      if (misses > 2) $('v-ms').textContent = j.error || 'busy, retrying';
+      if (pending === null) pending = text;
     } else {
       $('v-ms').textContent = j.error || 'error';
     }
   } catch { $('v-ms').textContent = 'network error'; }
-  inflight = false;
-  if (pending !== null) { const p = pending; pending = null; send(p); }
+  const go = () => { inflight = false; if (pending !== null) { const p = pending; pending = null; send(p); } };
+  if (retryIn) setTimeout(go, retryIn); else go();
 }
 $('typed').addEventListener('input', (e) => { const t = e.target.value; if (t.trim()) send(t); });
 $('go').addEventListener('click', run);

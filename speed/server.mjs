@@ -15,7 +15,7 @@ const MODEL = process.env.SPEED_MODEL || 's1-fast';
 const budget = makeWindowBudget(Number(process.env.APP_BUDGET_PER_MIN || 240));
 const daily = makeDailyCap(Number(process.env.APP_DAILY_CAP || 40000));
 const runsPerIp = makeIpBuckets({ perMin: 3, burst: 3 });
-const keysPerIp = makeIpBuckets({ perMin: 90, burst: 20 });
+const keysPerIp = makeIpBuckets({ perMin: 300, burst: 60 });
 const FIREHOSE_N = 60;
 const FIREHOSE_CONCURRENCY = Number(process.env.FIREHOSE_CONCURRENCY || 12);
 
