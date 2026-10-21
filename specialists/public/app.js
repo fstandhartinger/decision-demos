@@ -194,7 +194,7 @@ function renderTrack() {
   const t = S.tracks[track], c = t.champion;
   const n = (t.items || []);
   const cnt = { cw: n.filter((it) => it.answers?.champion?.hit && !it.answers?.jev?.hit).length, jw: n.filter((it) => it.answers?.jev?.hit && !it.answers?.champion?.hit).length };
-  $('spec-body').innerHTML = `<div class="card champ"><div class="eyebrow">Current competition champion</div>
+  $('spec-body').innerHTML = `<div class="card champ"><div class="eyebrow">Track champion when measured (${esc(fmtDate(S.date))}) · track ended 21 Oct 2026</div>
       <h3>${esc(c.name)}</h3>
       <p class="small"><a href="https://huggingface.co/${esc(c.repo)}">huggingface.co/${esc(c.repo)}</a>${c.revision ? ` · revision <span class="mono">${esc(c.revision)}</span>` : ''}</p>
       <p class="small muted">Base: ${esc(c.base)}${c.note ? '. ' + esc(c.note) : ''}</p>
@@ -217,7 +217,7 @@ function renderTrack() {
   renderSpecItems();
 }
 function specView() {
-  $('spec-root').innerHTML = `<p class="muted lede">More use-case models, each trained for one job, against Jev 1.14.0 and our general s1-pro on the same held-out items. Each is the current competition champion of its track, measured offline on ${esc(fmtDate(S.date))}. The set labels below say which items were generated after training and which are public and may have been trained on; compare on the unseen ones first.</p>
+  $('spec-root').innerHTML = `<p class="muted lede">More use-case models, each trained for one job, against Jev 1.14.0 and our general s1-pro on the same held-out items. Each was the competition champion of its track on reax.co when we measured it offline on ${esc(fmtDate(S.date))}; both use-case tracks ended on 21 Oct 2026 at 13:00 UTC. The set labels below say which items were generated after training and which are public and may have been trained on; compare on the unseen ones first.</p>
     <div class="tabs" role="tablist" id="t-tabs">${S.tracks.map((t, i) => `<button role="tab" aria-selected="${i === 0}" data-k="${i}">${esc(t.label)}</button>`).join('')}</div>
     <div id="spec-body"></div>`;
   tabs('t-tabs', (k) => { track = Number(k); renderTrack(); });
