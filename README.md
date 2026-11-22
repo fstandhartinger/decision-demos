@@ -1,6 +1,6 @@
 # decisionmodels.io demos
 
-Three small public demos for [decisionmodels.io](https://decisionmodels.io):
+Three small public demos for [decisionmodels.io](https://decisionmodels.io/?utm_source=github&utm_medium=readme&utm_campaign=decision-demos):
 
 - `speed/` — every chat message of a live stream moderated by **s1-fast** before it is shown (https://dm-speed.app.mintapis.com)
 - `smarter/` — **s1-pro** vs Jev 1.14.0 on the public JevBench items, item by item (https://dm-smarter.app.mintapis.com)
